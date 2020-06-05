@@ -1840,7 +1840,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe709;
+  background: #ff16ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1959,6 +1959,9 @@ pre .javascript .function {
 }
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
+}
+a {
+  border-bottom: none;
 }
 .footer {
   font-size: 14px;
