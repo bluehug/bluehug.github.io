@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>软件测试初识</title>
+      <link href="/2020/06/22/chushi/"/>
+      <url>/2020/06/22/chushi/</url>
+      
+        <content type="html"><![CDATA[<blockquote><ul><li>软件测试定义、目的、原则</li><li>软件危机</li><li>测试与调试区别</li><li>缺陷的定义、状态、发生原因</li></ul></blockquote><a id="more"></a><h3 id="一、什么是软件测试"><a href="#一、什么是软件测试" class="headerlink" title="一、什么是软件测试"></a>一、什么是软件测试</h3><blockquote><p>软件测试就是运用手工或者工具以规定的方法对软件进行操作的过程，以发现软件的错误和缺陷，衡量软件质量，评估软件是否满足规定的要求。</p></blockquote><h3 id="二、软件测试的目的"><a href="#二、软件测试的目的" class="headerlink" title="二、软件测试的目的"></a>二、软件测试的目的</h3><blockquote><ul><li>确认软件质量，表明软件能够工作</li><li>预防缺陷，降低风险（尽早参加测试）</li><li>尽可能发现软件中的错误</li><li>通过测试活动，发现并解决缺陷，增加人们对被测对象的信心</li><li>为决策者提供信息，如：非正常条件下的功能和特性</li></ul></blockquote><h3 id="三、软件测试的原则"><a href="#三、软件测试的原则" class="headerlink" title="三、软件测试的原则"></a>三、软件测试的原则</h3><blockquote><ul><li>尽早参与测试</li><li>测试是证明软件存在错误，而不是证明软件没有错误</li><li>二八法则，80%的缺陷集中在20%的模块上</li><li>杀虫剂悖论，测试人员经常用固定方法和思维去进行测试，会造成测漏，所以要交叉测试</li><li>软件测试是不能穷尽的</li><li>最好的测试是发现了至今为止仍未发现的错误</li></ul></blockquote><h3 id="四、软件危机的表现"><a href="#四、软件危机的表现" class="headerlink" title="四、软件危机的表现"></a>四、软件危机的表现</h3><blockquote><ul><li>早期需求分析不明确，造成后期矛盾几种暴露</li><li>不遵循开发规范，开发文档不完整，软件难以维护</li><li>缺乏严密有效的软件质量检测手段，交付给用户的软件质量差</li></ul></blockquote><h3 id="五、测试与调试的差别"><a href="#五、测试与调试的差别" class="headerlink" title="五、测试与调试的差别"></a>五、测试与调试的差别</h3><blockquote><ul><li>测试有目的性，有预期的输出；调试没有目的性，操作很随机</li><li>测试由测试人员进行；调试由开发人员进行</li><li>先通过测试发现错误或缺陷，然后开发人员再通过调试取定位错误和缺陷的根源</li><li>测试是一个过程，可重复；调试是一次性的，没有可重复性</li></ul></blockquote><h3 id="六、引发Bug的原因"><a href="#六、引发Bug的原因" class="headerlink" title="六、引发Bug的原因"></a>六、引发Bug的原因</h3><blockquote><ul><li>需求分析不明确</li><li>缺乏有效沟通，三方（产品经理、开发、测试）对需求和设计的理解不一致</li><li>需求不断变更</li><li>软件复杂度越来越高</li><li>项目进度压力</li><li>。。。。。</li></ul></blockquote><h3 id="七、软件缺陷的定义"><a href="#七、软件缺陷的定义" class="headerlink" title="七、软件缺陷的定义"></a>七、软件缺陷的定义</h3><blockquote><ul><li>软件没有实现产品说明书所描述的功能</li><li>软件实现了产品说明书描述不应有的功能</li><li>软件执行了产品说明书没讲的操作</li><li>软件没有实现产品说明书没讲但应该实现的功能</li><li>从软件测试员的角度来看，软件难以理解、不易使用、运行缓慢，或者最终用户认为不对</li></ul></blockquote><h3 id="八、软件缺陷的状态"><a href="#八、软件缺陷的状态" class="headerlink" title="八、软件缺陷的状态"></a>八、软件缺陷的状态</h3><blockquote><p>new：测试中新报告的软件缺陷，等待分派</p><p>open：已确认的缺陷，等待开发人员修改</p><p>fixed：已经被开发人员修改的缺陷，等待测试人员校验</p><p>rejected：不是缺陷或不需要修复</p><p>reopen：没有修复，重新打开返回开发人员</p><p>close：已经被测试人员确认得到修复，可以关闭</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 功能测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人博客搭建</title>
       <link href="/2019/07/11/blog/"/>
       <url>/2019/07/11/blog/</url>
@@ -29,7 +54,7 @@
     
     
     <entry>
-      <title> Java基础之tomcat配置		</title>
+      <title>Java基础之tomcat配置</title>
       <link href="/2019/03/21/tomcatpz/"/>
       <url>/2019/03/21/tomcatpz/</url>
       
@@ -54,7 +79,7 @@
     
     
     <entry>
-      <title> Java基础之开发环境配置</title>
+      <title>Java基础之开发环境配置</title>
       <link href="/2019/03/18/hjpeizhi/"/>
       <url>/2019/03/18/hjpeizhi/</url>
       
@@ -79,7 +104,7 @@
     
     
     <entry>
-      <title> Java基础之Java简介		</title>
+      <title>Java基础之Java简介</title>
       <link href="/2019/03/03/jianjie/"/>
       <url>/2019/03/03/jianjie/</url>
       
