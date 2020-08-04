@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Hexo + Github + Window 个人博客搭建步骤记录">
+<meta name="description" content="Hexo + Github + Window 个人博客搭建步骤记录+优化">
 <meta name="keywords" content="Blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客搭建">
 <meta property="og:url" content="https://mtblog.top/2019/07/11/blog/index.html">
 <meta property="og:site_name" content="木木十三">
-<meta property="og:description" content="Hexo + Github + Window 个人博客搭建步骤记录">
+<meta property="og:description" content="Hexo + Github + Window 个人博客搭建步骤记录+优化">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-22T02:38:11.706Z">
+<meta property="og:updated_time" content="2020-08-04T15:11:44.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客搭建">
-<meta name="twitter:description" content="Hexo + Github + Window 个人博客搭建步骤记录">
+<meta name="twitter:description" content="Hexo + Github + Window 个人博客搭建步骤记录+优化">
 
 
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k 字
+                  1.1k 字
                 </span>
               
 
@@ -431,7 +431,7 @@
       
 
       
-        <p>Hexo + Github + Window 个人博客搭建步骤记录</p>
+        <p>Hexo + Github + Window 个人博客搭建步骤记录+优化</p>
 <a id="more"></a>
 
 <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>Hexo+GitHub+Window</p>
@@ -483,6 +483,13 @@
 <h2 id="九、域名绑定"><a href="#九、域名绑定" class="headerlink" title="九、域名绑定"></a>九、域名绑定</h2><h3 id="1-点击Github的setting"><a href="#1-点击Github的setting" class="headerlink" title="1.点击Github的setting"></a>1.点击Github的<code>setting</code></h3><p>找到<code>GitHub Pages</code>里的<code>Custom domain</code>，填上域名，这时候项目根目录应该会出现一个名为CNAME的文件了。打开本地博客/source目录，新建CNAME文件，注意没有后缀。然后在里面写上你的域名（如:test.com,不需要添加http/www等前缀），保存。最后运行hexo g、hexo d上传到github</p>
 <h3 id="2-根据IP地址添加解析"><a href="#2-根据IP地址添加解析" class="headerlink" title="2.根据IP地址添加解析"></a>2.根据IP地址添加解析</h3><p>打开cmd,Ping 账号名.github.io,获得IP地址<br>添加A类型，主机记录分别为@和WWW的两条解析，记录值为上面IP地址</p>
 <h3 id="3-测试"><a href="#3-测试" class="headerlink" title="3.测试"></a>3.测试</h3><p>访问网址，确认是否成功</p>
+<h2 id="十、网站优化"><a href="#十、网站优化" class="headerlink" title="十、网站优化"></a>十、网站优化</h2><h3 id="1、博客文章无法显示图片"><a href="#1、博客文章无法显示图片" class="headerlink" title="1、博客文章无法显示图片"></a>1、博客文章无法显示图片</h3><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>上传的markdown中引用的是电脑本地的图片，而这些图片并没有上传到GitHub上，所以无法显示图片</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ol>
+<li>修改系统配置文件中<code>post_asset_folder</code>为<code>true</code>，此时新建博客后，会出现一个和文件同名的文件夹。</li>
+<li>安装插件：<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></li>
+<li>文章在引用图片时，采用相对路径</li>
+</ol>
+<p>此办法将图片也上传到GitHub上，并用相对路径来调用图片，问题解决。</p>
 
       
     </div>
@@ -699,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、简介"><span class="nav-number">1.</span> <span class="nav-text">一、简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、新建Github仓库"><span class="nav-number">2.</span> <span class="nav-text">二、新建Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装Git"><span class="nav-number">3.</span> <span class="nav-text">三、安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装Node-Js"><span class="nav-number">4.</span> <span class="nav-text">五、安装Node.Js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、安装Hexo"><span class="nav-number">5.</span> <span class="nav-text">六、安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Hexo到文件夹"><span class="nav-number">5.1.</span> <span class="nav-text">1.安装Hexo到文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-初始化网站"><span class="nav-number">5.2.</span> <span class="nav-text">2.初始化网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-生成静态网页"><span class="nav-number">5.3.</span> <span class="nav-text">3.生成静态网页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、Git与Github关联"><span class="nav-number">6.</span> <span class="nav-text">七、Git与Github关联</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-设置账号信息"><span class="nav-number">6.1.</span> <span class="nav-text">1.设置账号信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-检查电脑上是否存在SSH-key"><span class="nav-number">6.2.</span> <span class="nav-text">2.检查电脑上是否存在SSH key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-备份并移除原来的SSH-key设置-如果不移除，新生成的ssh-key也可以覆盖原来的"><span class="nav-number">6.3.</span> <span class="nav-text">3.备份并移除原来的SSH key设置(如果不移除，新生成的ssh key也可以覆盖原来的)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-生成新的SSH-key"><span class="nav-number">6.4.</span> <span class="nav-text">4.生成新的SSH key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-添加SSH-key到Github"><span class="nav-number">6.5.</span> <span class="nav-text">5.添加SSH key到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试是否成功"><span class="nav-number">6.6.</span> <span class="nav-text">6.测试是否成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、部署到Github"><span class="nav-number">7.</span> <span class="nav-text">八、部署到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、域名绑定"><span class="nav-number">8.</span> <span class="nav-text">九、域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-点击Github的setting"><span class="nav-number">8.1.</span> <span class="nav-text">1.点击Github的setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-根据IP地址添加解析"><span class="nav-number">8.2.</span> <span class="nav-text">2.根据IP地址添加解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-测试"><span class="nav-number">8.3.</span> <span class="nav-text">3.测试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、简介"><span class="nav-number">1.</span> <span class="nav-text">一、简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、新建Github仓库"><span class="nav-number">2.</span> <span class="nav-text">二、新建Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装Git"><span class="nav-number">3.</span> <span class="nav-text">三、安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装Node-Js"><span class="nav-number">4.</span> <span class="nav-text">五、安装Node.Js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、安装Hexo"><span class="nav-number">5.</span> <span class="nav-text">六、安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Hexo到文件夹"><span class="nav-number">5.1.</span> <span class="nav-text">1.安装Hexo到文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-初始化网站"><span class="nav-number">5.2.</span> <span class="nav-text">2.初始化网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-生成静态网页"><span class="nav-number">5.3.</span> <span class="nav-text">3.生成静态网页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、Git与Github关联"><span class="nav-number">6.</span> <span class="nav-text">七、Git与Github关联</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-设置账号信息"><span class="nav-number">6.1.</span> <span class="nav-text">1.设置账号信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-检查电脑上是否存在SSH-key"><span class="nav-number">6.2.</span> <span class="nav-text">2.检查电脑上是否存在SSH key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-备份并移除原来的SSH-key设置-如果不移除，新生成的ssh-key也可以覆盖原来的"><span class="nav-number">6.3.</span> <span class="nav-text">3.备份并移除原来的SSH key设置(如果不移除，新生成的ssh key也可以覆盖原来的)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-生成新的SSH-key"><span class="nav-number">6.4.</span> <span class="nav-text">4.生成新的SSH key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-添加SSH-key到Github"><span class="nav-number">6.5.</span> <span class="nav-text">5.添加SSH key到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试是否成功"><span class="nav-number">6.6.</span> <span class="nav-text">6.测试是否成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、部署到Github"><span class="nav-number">7.</span> <span class="nav-text">八、部署到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、域名绑定"><span class="nav-number">8.</span> <span class="nav-text">九、域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-点击Github的setting"><span class="nav-number">8.1.</span> <span class="nav-text">1.点击Github的setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-根据IP地址添加解析"><span class="nav-number">8.2.</span> <span class="nav-text">2.根据IP地址添加解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-测试"><span class="nav-number">8.3.</span> <span class="nav-text">3.测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、网站优化"><span class="nav-number">9.</span> <span class="nav-text">十、网站优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、博客文章无法显示图片"><span class="nav-number">9.1.</span> <span class="nav-text">1、博客文章无法显示图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-number">9.1.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">9.1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
