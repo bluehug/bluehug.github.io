@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>fiddler</title>
+      <link href="/2020/08/04/fiddler/"/>
+      <url>/2020/08/04/fiddler/</url>
+      
+        <content type="html"><![CDATA[<ol><li>fiddler无法抓包</li><li>为手机设置代理</li></ol><a id="more"></a><h3 id="一、fiddler-无法抓包"><a href="#一、fiddler-无法抓包" class="headerlink" title="一、fiddler 无法抓包"></a>一、fiddler 无法抓包</h3><ol><li>是否安装https证书</li><li>Internet代理是否正确</li><li>capturing开关是否打开</li><li>是否设置了过滤器</li></ol><h3 id="二、为手机设置代理"><a href="#二、为手机设置代理" class="headerlink" title="二、为手机设置代理"></a>二、为手机设置代理</h3><p>这里以红米手机为例，并且pc端fiddler已设置好，可以访问https网站，手机电脑处于同一局域网下。</p><h4 id="1、进入无线网络"><a href="#1、进入无线网络" class="headerlink" title="1、进入无线网络"></a>1、进入无线网络<img src="/2020/08/04/fiddler/E:%5CBlog%5Cbluehug.github.io%5Csource_posts%5Cfiddler%5C1.jpg" alt="进入无线网络"></h4><h4 id="2、找到代理"><a href="#2、找到代理" class="headerlink" title="2、找到代理"></a>2、找到代理</h4><p><img src="/2020/08/04/fiddler/E:%5CBlog%5Cbluehug.github.io%5Csource_posts%5Cfiddler%5C2.jpg" alt="找到代理"></p><p>3、将代理设置为手动，并填入电脑的IP地址和端口号</p><p><img src="/2020/08/04/fiddler/E:%5CBlog%5Cbluehug.github.io%5Csource_posts%5Cfiddler%5C3.jpg" alt="手动代理"></p><h4 id="4、浏览器输入电脑IP-端口号，下载证书"><a href="#4、浏览器输入电脑IP-端口号，下载证书" class="headerlink" title="4、浏览器输入电脑IP:端口号，下载证书"></a>4、浏览器输入<code>电脑IP:端口号</code>，下载证书</h4><p><img src="/2020/08/04/fiddler/E:%5CBlog%5Cbluehug.github.io%5Csource_posts%5Cfiddler%5C4.jpg" alt="下载证书"></p><h4 id="5、双击证书或者通过设置——-gt-系统安全——-gt-从SD卡安装证书，不同手机安装方法可能不同"><a href="#5、双击证书或者通过设置——-gt-系统安全——-gt-从SD卡安装证书，不同手机安装方法可能不同" class="headerlink" title="5、双击证书或者通过设置——&gt;系统安全——&gt;从SD卡安装证书，不同手机安装方法可能不同"></a>5、双击证书或者通过设置——&gt;系统安全——&gt;从SD卡安装证书，不同手机安装方法可能不同</h4><p><img src="/2020/08/04/fiddler/E:%5CBlog%5Cbluehug.github.io%5Csource_posts%5Cfiddler%5C5.jpg" alt="安装证书"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件测试工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> fiddler </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人博客搭建</title>
       <link href="/2019/07/11/blog/"/>
       <url>/2019/07/11/blog/</url>
