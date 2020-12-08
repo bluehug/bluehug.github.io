@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习笔记,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="木木十三">
-<meta property="og:url" content="https://mtblog.top/archives/2020/08/index.html">
+<meta name="description" content="requests库常用方法 获取响应内容 设置超时">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python_requests">
+<meta property="og:url" content="https://mtblog.top/2020/12/09/python-requests/index.html">
 <meta property="og:site_name" content="木木十三">
+<meta property="og:description" content="requests库常用方法 获取响应内容 设置超时">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-08T16:42:45.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木木十三">
+<meta name="twitter:title" content="python_requests">
+<meta name="twitter:description" content="requests库常用方法 获取响应内容 设置超时">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://mtblog.top/archives/2020/08/">
+  <link rel="canonical" href="https://mtblog.top/2020/12/09/python-requests/">
 
 
 
 
 
-  <title>归档 | 木木十三</title>
+  <title>python_requests | 木木十三</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/bluehug" class="github-corner" aria-label="View source on GitHub">
 	<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true">
@@ -292,107 +297,312 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mtblog.top/2020/12/09/python-requests/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mu Tong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/nofaceman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木木十三">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/08/17/adb/" itemprop="url">
-              
-                <span itemprop="name">adb</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">python_requests</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-08-17T23:10:41+08:00" content="2020-08-17">
-          08-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-09T00:39:26+08:00">
+                2020-12-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  602 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li>requests库常用方法</li>
+<li>获取响应内容</li>
+<li>设置超时</li>
+</ol>
+<a id="more"></a>
+
+<h3 id="一、Request库的常用方法"><a href="#一、Request库的常用方法" class="headerlink" title="一、Request库的常用方法"></a>一、Request库的常用方法</h3><h4 id="（一）requests-request-method-url-kwargs"><a href="#（一）requests-request-method-url-kwargs" class="headerlink" title="（一）requests.request(method,url,**kwargs)"></a>（一）requests.request(method,url,**kwargs)</h4><blockquote>
+<p>method：常用的有<code>get</code>、<code>post</code>、<code>put</code>、<code>delete</code>、<code>head</code>、<code>options</code></p>
+<p>url：请求的URL</p>
+<p>**kwargs：13个控制访问的可选参数</p>
+</blockquote>
+<p>可选参数如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名</th>
+<th align="left">支持类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">params</td>
+<td align="left">字典、字节序列</td>
+<td align="left">以键值对的方式作为参数加入到URL中</td>
+</tr>
+<tr>
+<td align="left">data</td>
+<td align="left">字典、字节序列、文件</td>
+<td align="left">作为请求的Body内容</td>
+</tr>
+<tr>
+<td align="left">json</td>
+<td align="left">JSON格式的数据</td>
+<td align="left">作为请求的Body内容</td>
+</tr>
+<tr>
+<td align="left">headers</td>
+<td align="left">字典</td>
+<td align="left">HTTP请求头，作为请求对象Header里的内容</td>
+</tr>
+<tr>
+<td align="left">cookies</td>
+<td align="left">字典或CookieJar</td>
+<td align="left">请求中的Cookie</td>
+</tr>
+<tr>
+<td align="left">files</td>
+<td align="left">字典，形式为{filename,fileobject}</td>
+<td align="left">提交传递文件</td>
+</tr>
+<tr>
+<td align="left">auth</td>
+<td align="left">Auth句柄或（user,pass）元组</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">timeout</td>
+<td align="left">浮点数、元组</td>
+<td align="left">超时时间</td>
+</tr>
+<tr>
+<td align="left">allow_redirects</td>
+<td align="left">True/False</td>
+<td align="left">重定向开关</td>
+</tr>
+<tr>
+<td align="left">proxies</td>
+<td align="left">字典</td>
+<td align="left">将协议映射为代理的URL</td>
+</tr>
+<tr>
+<td align="left">verify</td>
+<td align="left">True/False</td>
+<td align="left">认证SSL证书开关</td>
+</tr>
+<tr>
+<td align="left">stream</td>
+<td align="left">True/False</td>
+<td align="left">默认为True，为True会先下载响应头，为False会立即下载响应头和响应体</td>
+</tr>
+<tr>
+<td align="left">cert</td>
+<td align="left">字符串、元组</td>
+<td align="left">为字符串时是SSL客户端证书文件的路径，为元组时是一个(‘cert’,’key’)二元值对</td>
+</tr>
+</tbody></table>
+<h4 id="（二）request-get-url-params-None-kwargs"><a href="#（二）request-get-url-params-None-kwargs" class="headerlink" title="（二）request.get(url,params=None,**kwargs)"></a>（二）request.get(url,params=None,**kwargs)</h4><p>请求获取URL的资源</p>
+<h4 id="（三）request-head-url-kwargs"><a href="#（三）request-head-url-kwargs" class="headerlink" title="（三）request.head(url,**kwargs)"></a>（三）request.head(url,**kwargs)</h4><p>请求获取响应的头部信息</p>
+<h4 id="（四）request-post-url-params-None-json-None-kwargs"><a href="#（四）request-post-url-params-None-json-None-kwargs" class="headerlink" title="（四）request.post(url,params=None,json=None,**kwargs)"></a>（四）request.post(url,params=None,json=None,**kwargs)</h4><p>请求向URL的资源后附加数据</p>
+<h4 id="（五）request-put-url-data-None-kwargs"><a href="#（五）request-put-url-data-None-kwargs" class="headerlink" title="（五）request.put(url,data=None,**kwargs)"></a>（五）request.put(url,data=None,**kwargs)</h4><p>请求向URL位置存储一个资源，覆盖原URL位置的资源</p>
+<h4 id="（六）request-patch-url-data-None-kwargs"><a href="#（六）request-patch-url-data-None-kwargs" class="headerlink" title="（六）request.patch(url,data=None,**kwargs)"></a>（六）request.patch(url,data=None,**kwargs)</h4><p>请求局部更新URL位置的资源</p>
+<h4 id="（七）request-delete-rul-kwargs"><a href="#（七）request-delete-rul-kwargs" class="headerlink" title="（七）request.delete(rul,**kwargs)"></a>（七）request.delete(rul,**kwargs)</h4><p>请求删除URL位置的资源</p>
+<h3 id="二、响应"><a href="#二、响应" class="headerlink" title="二、响应"></a>二、响应</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 状态码</span></span><br><span class="line">req.status_code</span><br><span class="line"><span class="comment"># 响应头</span></span><br><span class="line">req.headers</span><br><span class="line"><span class="comment"># 请求链接</span></span><br><span class="line">req.url</span><br><span class="line"><span class="comment"># 获取网页编码</span></span><br><span class="line">req.encoding</span><br><span class="line"><span class="comment"># 获取cookie</span></span><br><span class="line">req.cookies</span><br><span class="line"><span class="comment"># 获取网页代码</span></span><br><span class="line">req.text</span><br></pre></td></tr></table></figure>
+
+<p>如果HTTP请求返回了不成功的状态码，那么<code>req.raise_for_status()</code>会抛出一个HTTPError</p>
+<h3 id="三、超时"><a href="#三、超时" class="headerlink" title="三、超时"></a>三、超时</h3><p>默认情况下，requests不会自动进行超时处理。连接超时指的是客户端到服务端的连接时，request会等待的秒数。读取超时指的是客户端等待服务器发送请求的时间。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一种方式，单独设置超时时间，包括连接和读取</span></span><br><span class="line">request.get(<span class="string">'www.baidu.com'</span>,timeout=<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 第二种方式，分别作为连接和读取的超时时间</span></span><br><span class="line">request.get(<span class="string">'www.baidu.com'</span>,timeout=(<span class="number">1</span>,<span class="number">3</span>))</span><br><span class="line"><span class="comment"># 第三种方式，request永远等待</span></span><br><span class="line">request.get(<span class="string">'www.baidu.com'</span>,timeout=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
 
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/08/04/fiddler/" itemprop="url">
-              
-                <span itemprop="name">fiddler</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-08-04T22:31:15+08:00" content="2020-08-04">
-          08-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+	<div>
+	  
+		<div>
+    
+          
+        
+          <div style="text-align:center;color: #ccc;font-size:14px;">-------------  End<i class="fa fa-star"></i>  -------------
+          </div>
+    
+          
+
+</div>
+
+	  
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/10/mysqlTest1/" rel="next" title="MySQL练习（1）">
+                <i class="fa fa-chevron-left"></i> MySQL练习（1）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -400,6 +610,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -420,8 +634,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -513,6 +736,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Request库的常用方法"><span class="nav-number">1.</span> <span class="nav-text">一、Request库的常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（一）requests-request-method-url-kwargs"><span class="nav-number">1.1.</span> <span class="nav-text">（一）requests.request(method,url,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（二）request-get-url-params-None-kwargs"><span class="nav-number">1.2.</span> <span class="nav-text">（二）request.get(url,params=None,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（三）request-head-url-kwargs"><span class="nav-number">1.3.</span> <span class="nav-text">（三）request.head(url,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（四）request-post-url-params-None-json-None-kwargs"><span class="nav-number">1.4.</span> <span class="nav-text">（四）request.post(url,params=None,json=None,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（五）request-put-url-data-None-kwargs"><span class="nav-number">1.5.</span> <span class="nav-text">（五）request.put(url,data=None,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（六）request-patch-url-data-None-kwargs"><span class="nav-number">1.6.</span> <span class="nav-text">（六）request.patch(url,data=None,**kwargs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（七）request-delete-rul-kwargs"><span class="nav-number">1.7.</span> <span class="nav-text">（七）request.delete(rul,**kwargs)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、响应"><span class="nav-number">2.</span> <span class="nav-text">二、响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、超时"><span class="nav-number">3.</span> <span class="nav-text">三、超时</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -656,6 +895,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
