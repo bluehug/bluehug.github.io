@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="MySQL Between And处理时间范围 MySQL 三表查询 MySQL limit和offset用法 MySQL IFNULL函数">
+<meta name="description" content="os模块小练习">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL学习笔记（1）">
-<meta property="og:url" content="https://mtblog.top/2020/11/10/mysqlNote1/index.html">
+<meta property="og:title" content="python之os模块初识">
+<meta property="og:url" content="https://mtblog.top/2021/01/06/python-os/index.html">
 <meta property="og:site_name" content="木木十三">
-<meta property="og:description" content="MySQL Between And处理时间范围 MySQL 三表查询 MySQL limit和offset用法 MySQL IFNULL函数">
+<meta property="og:description" content="os模块小练习">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-11-10T16:10:39.610Z">
+<meta property="og:updated_time" content="2021-01-06T13:06:40.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL学习笔记（1）">
-<meta name="twitter:description" content="MySQL Between And处理时间范围 MySQL 三表查询 MySQL limit和offset用法 MySQL IFNULL函数">
+<meta name="twitter:title" content="python之os模块初识">
+<meta name="twitter:description" content="os模块小练习">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://mtblog.top/2020/11/10/mysqlNote1/">
+  <link rel="canonical" href="https://mtblog.top/2021/01/06/python-os/">
 
 
 
 
 
-  <title>MySQL学习笔记（1） | 木木十三</title>
+  <title>python之os模块初识 | 木木十三</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mtblog.top/2020/11/10/mysqlNote1/">
+    <link itemprop="mainEntityOfPage" href="https://mtblog.top/2021/01/06/python-os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mu Tong">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MySQL学习笔记（1）</h1>
+          <h1 class="post-title" itemprop="name headline">python之os模块初识</h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-10T23:42:12+08:00">
-                2020-11-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-06T21:00:47+08:00">
+                2021-01-06
               </time>
             
 
@@ -363,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  377 字
+                  382 字
                 </span>
               
 
@@ -431,36 +431,12 @@
       
 
       
-        <ol>
-<li>MySQL Between And处理时间范围</li>
-<li>MySQL 三表查询</li>
-<li>MySQL limit和offset用法</li>
-<li>MySQL IFNULL函数</li>
-</ol>
+        <p>os模块小练习</p>
 <a id="more"></a>
 
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getdemo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 获取当前工作目录</span></span><br><span class="line">    print(os.getcwd())</span><br><span class="line">    <span class="comment"># 输出结果：F:\workspace\day2</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 返回文件列表</span></span><br><span class="line">    print(os.listdir(<span class="string">'.'</span>))</span><br><span class="line">    <span class="comment"># 输出结果：['.idea', 'ershoufang.txt', 'main.py', 'osfile', 'python_os.py', 'python_os1.py', 'selenium1.py', 'venv']</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建文件夹</span></span><br><span class="line">    <span class="comment"># os.mkdir('./osfile')</span></span><br><span class="line">    <span class="comment"># 输出结果：在当前目录下创建了一个名为osfile的目录</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取系统环境变量并打印</span></span><br><span class="line">    <span class="comment"># for i in (os.getenv('PATH').split(';')):</span></span><br><span class="line">    <span class="comment">#     print(i)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 表示当前文件夹</span></span><br><span class="line">    print(os.curdir)</span><br><span class="line">    <span class="comment"># 输出结果：.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 表示上一层文件夹</span></span><br><span class="line">    print(os.pardir)</span><br><span class="line">    <span class="comment"># 输出结果：..</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取路径间间隔符</span></span><br><span class="line">    print(os.sep)</span><br><span class="line">    <span class="comment"># 输出结果：\</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将相对路径转为绝对路径</span></span><br><span class="line">    print(os.path.abspath(<span class="string">'./os_path'</span>))</span><br><span class="line">    <span class="comment"># 输出结果：F:\workspace\day2\os_path</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取当前脚本的绝对路径</span></span><br><span class="line">    print(os.path.abspath(__file__))</span><br><span class="line">    <span class="comment"># 输出结果：F:\workspace\day2\python_os.py</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取路径中的目录部分</span></span><br><span class="line">    print(os.path.dirname(__file__))</span><br><span class="line">    <span class="comment"># F:/workspace/day2</span></span><br><span class="line">    print(os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    <span class="comment"># 输出结果：F:\workspace\day2</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取目录中的主体部分</span></span><br><span class="line">    print(os.path.basename(os.path.abspath(__file__)))</span><br><span class="line">    <span class="comment"># 输出结果：python_os.py</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将路径切割为目录部分和主体部分</span></span><br><span class="line">    print(os.path.split(os.path.abspath(__file__)))</span><br><span class="line">    <span class="comment"># 输出结果：('F:\\workspace\\day2', 'python_os.py')</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将两个路径合为一个</span></span><br><span class="line">    print(os.path.join(os.path.abspath(<span class="string">'./osfile'</span>), os.pardir))</span><br><span class="line">    <span class="comment"># 输出结果: F:\workspace\day2\osfile\..</span></span><br><span class="line">    print(os.path.join(os.path.dirname(__file__), os.pardir))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 检测路径是否存在</span></span><br><span class="line">    print(os.path.exists(<span class="string">'./osfile'</span>))</span><br><span class="line">    <span class="comment"># 输出结果： True</span></span><br><span class="line"></span><br><span class="line">    path_dir = os.path.join(os.path.dirname(__file__), os.pardir)</span><br><span class="line">    print(path_dir)</span><br><span class="line">    <span class="comment"># 输出结果：F:/workspace/day2\..</span></span><br><span class="line">    path_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))</span><br><span class="line">    print(path_dir)</span><br><span class="line">    <span class="comment"># 输出结果： F:\workspace</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    getdemo()</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="1-MySQL-Between-And处理时间范围"><a href="#1-MySQL-Between-And处理时间范围" class="headerlink" title="1.  MySQL Between And处理时间范围"></a>1.  MySQL Between And处理时间范围</h3><h4 id="情景：MySQL查询在某个时间段内的数据"><a href="#情景：MySQL查询在某个时间段内的数据" class="headerlink" title="情景：MySQL查询在某个时间段内的数据"></a>情景：MySQL查询在某个时间段内的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from test_table where create_date between &quot;2020-10-11&quot; and &quot;2020-11-11&quot;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>如果<code>create_time</code>是<code>date</code>类型，那么查询的结果是<code>2020-10-11 到 2020-11-11</code>的数据</li>
-<li>如果<code>create_time</code>是<code>datetime</code>类型，那么查询的结果是<code>2020-10-11 到 2020-11-10</code>的数据，即是<code>2020-10-11 00:00:00 到 2020-11-11 00:00:00</code>的数据</li>
-<li>如果<code>create_time</code>是<code>datetime</code>类型，想要查询出到11月11日的数据，其中一种方法是在sql中对应<code>datetime</code>格式，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from test_table where create_date between &quot;2020-10-11 00:00:00&quot; and &quot;2020-11-11 23:59:59&quot;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-MySQL-三表查询"><a href="#2-MySQL-三表查询" class="headerlink" title="2. MySQL 三表查询"></a>2. MySQL 三表查询</h3><p>三张表：A，B，C内连接，左右连接与此类似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from A inner join B on A.id=B.id inner join C on A.id=C.id</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-MySQL-limit和offset用法"><a href="#3-MySQL-limit和offset用法" class="headerlink" title="3. MySQL limit和offset用法"></a>3. MySQL limit和offset用法</h3><p>（1）limit n<code>，表示读取n行记录</code></p>
-<p>（2）limit n,-1`，表示返回从第n+1行开始到最后一行的记录</p>
-<p>（3）<code>limit n,m</code>，表示返回从第n+1行开始到第m+1行的记录</p>
-<p>（4）<code>limit</code>初始记录行的偏移量为0</p>
-<p>（5）<code>limit n offset m</code>，表示从m+1行开始读取n条记录</p>
-<h3 id="4-MySQL-IFNULL函数"><a href="#4-MySQL-IFNULL函数" class="headerlink" title="4. MySQL IFNULL函数"></a>4. MySQL IFNULL函数</h3><p><code>IFNULL()</code>函数用于判断第一个表达式是否为<code>null</code>，如果为’null’则返回第二个参数的值，如果不为<code>null</code>则返回第一个参数的值</p>
-<p>语法为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IFNULL(Expression,value)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -504,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/08/17/adb/" rel="next" title="adb">
-                <i class="fa fa-chevron-left"></i> adb
+              <a href="/2020/12/30/python-pachong-test4/" rel="next" title="爬虫实战练习（四）">
+                <i class="fa fa-chevron-left"></i> 爬虫实战练习（四）
               </a>
             
           </div>
@@ -513,10 +489,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/11/10/mysqlTest1/" rel="prev" title="MySQL练习（1）">
-                MySQL练习（1） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -568,17 +540,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -670,22 +633,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-MySQL-Between-And处理时间范围"><span class="nav-number">1.</span> <span class="nav-text">1.  MySQL Between And处理时间范围</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#情景：MySQL查询在某个时间段内的数据"><span class="nav-number">1.1.</span> <span class="nav-text">情景：MySQL查询在某个时间段内的数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-MySQL-三表查询"><span class="nav-number">2.</span> <span class="nav-text">2. MySQL 三表查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-MySQL-limit和offset用法"><span class="nav-number">3.</span> <span class="nav-text">3. MySQL limit和offset用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-MySQL-IFNULL函数"><span class="nav-number">4.</span> <span class="nav-text">4. MySQL IFNULL函数</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

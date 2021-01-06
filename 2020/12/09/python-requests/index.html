@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="木木十三">
 <meta property="og:description" content="requests库常用方法 获取响应内容 设置超时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-08T16:52:36.705Z">
+<meta property="og:updated_time" content="2021-01-04T15:13:47.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python之requests库">
 <meta name="twitter:description" content="requests库常用方法 获取响应内容 设置超时">
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  602 字
+                  611 字
                 </span>
               
 
@@ -524,7 +524,7 @@
 <h4 id="（五）request-put-url-data-None-kwargs"><a href="#（五）request-put-url-data-None-kwargs" class="headerlink" title="（五）request.put(url,data=None,**kwargs)"></a>（五）request.put(url,data=None,**kwargs)</h4><p>请求向URL位置存储一个资源，覆盖原URL位置的资源</p>
 <h4 id="（六）request-patch-url-data-None-kwargs"><a href="#（六）request-patch-url-data-None-kwargs" class="headerlink" title="（六）request.patch(url,data=None,**kwargs)"></a>（六）request.patch(url,data=None,**kwargs)</h4><p>请求局部更新URL位置的资源</p>
 <h4 id="（七）request-delete-rul-kwargs"><a href="#（七）request-delete-rul-kwargs" class="headerlink" title="（七）request.delete(rul,**kwargs)"></a>（七）request.delete(rul,**kwargs)</h4><p>请求删除URL位置的资源</p>
-<h3 id="二、响应"><a href="#二、响应" class="headerlink" title="二、响应"></a>二、响应</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 状态码</span></span><br><span class="line">req.status_code</span><br><span class="line"><span class="comment"># 响应头</span></span><br><span class="line">req.headers</span><br><span class="line"><span class="comment"># 请求链接</span></span><br><span class="line">req.url</span><br><span class="line"><span class="comment"># 获取网页编码</span></span><br><span class="line">req.encoding</span><br><span class="line"><span class="comment"># 获取cookie</span></span><br><span class="line">req.cookies</span><br><span class="line"><span class="comment"># 获取网页代码</span></span><br><span class="line">req.text</span><br></pre></td></tr></table></figure>
+<h3 id="二、响应"><a href="#二、响应" class="headerlink" title="二、响应"></a>二、响应</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 状态码</span></span><br><span class="line">resp.status_code</span><br><span class="line"><span class="comment"># 响应头</span></span><br><span class="line">resp.headers</span><br><span class="line"><span class="comment"># 请求链接</span></span><br><span class="line">resp.url</span><br><span class="line"><span class="comment"># 获取网页编码</span></span><br><span class="line">resp.encoding</span><br><span class="line"><span class="comment"># 获取cookie</span></span><br><span class="line">resp.cookies</span><br><span class="line"><span class="comment"># 获取网页代码</span></span><br><span class="line">resp.text</span><br><span class="line"><span class="comment"># 获取二进制数据</span></span><br><span class="line">resp.content</span><br></pre></td></tr></table></figure>
 
 <p>如果HTTP请求返回了不成功的状态码，那么<code>req.raise_for_status()</code>会抛出一个HTTPError</p>
 <h3 id="三、超时"><a href="#三、超时" class="headerlink" title="三、超时"></a>三、超时</h3><p>默认情况下，requests不会自动进行超时处理。连接超时指的是客户端到服务端的连接时，request会等待的秒数。读取超时指的是客户端等待服务器发送请求的时间。</p>
@@ -665,7 +665,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -777,7 +777,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <!--<i class="fa fa-user"></i>-->
 	<i class="fa fa-heart"></i>
