@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习笔记,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="木木十三">
-<meta property="og:url" content="https://mtblog.top/archives/2019/07/index.html">
+<meta name="description" content="初识time 初识datetime 计算两个时间点之间相差多少天、小时、分、秒">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python_datetime">
+<meta property="og:url" content="https://mtblog.top/2021/01/08/python-datetime/index.html">
 <meta property="og:site_name" content="木木十三">
+<meta property="og:description" content="初识time 初识datetime 计算两个时间点之间相差多少天、小时、分、秒">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-01-08T14:15:30.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木木十三">
+<meta name="twitter:title" content="python_datetime">
+<meta name="twitter:description" content="初识time 初识datetime 计算两个时间点之间相差多少天、小时、分、秒">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://mtblog.top/archives/2019/07/">
+  <link rel="canonical" href="https://mtblog.top/2021/01/08/python-datetime/">
 
 
 
 
 
-  <title>归档 | 木木十三</title>
+  <title>python_datetime | 木木十三</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/bluehug" class="github-corner" aria-label="View source on GitHub">
 	<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true">
@@ -292,72 +297,226 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mtblog.top/2021/01/08/python-datetime/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mu Tong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/nofaceman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木木十三">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/11/blog/" itemprop="url">
-              
-                <span itemprop="name">个人博客搭建</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">python_datetime</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-11T19:18:18+08:00" content="2019-07-11">
-          07-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-08T22:12:01+08:00">
+                2021-01-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  640 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li>初识time</li>
+<li>初识datetime</li>
+<li>计算两个时间点之间相差多少天、小时、分、秒</li>
+</ol>
+<a id="more"></a>
+
+<h3 id="1、初识time"><a href="#1、初识time" class="headerlink" title="1、初识time"></a>1、初识time</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前时间的时间戳，python中时间戳整数位是秒数，Java和JavaScript中整数位是毫秒数</span></span><br><span class="line">t1 = time.time()</span><br><span class="line">print(t1)</span><br><span class="line"><span class="comment"># 输出：1610114801.1910043</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将时间戳转换为当前时区的struct_time，gmtime()方法将一个时间戳转为UTC时区（0时区）的struct_time</span></span><br><span class="line"><span class="comment"># tm_wday:0-6(0表示周1)，tm_yday(一年中的第几天),tm_isdst:夏令时</span></span><br><span class="line">t2 = time.localtime(t1)</span><br><span class="line">print(t2)</span><br><span class="line"><span class="comment"># 输出：time.struct_time(tm_year=2021, tm_mon=1, tm_mday=8, tm_hour=22, tm_min=6, tm_sec=41, tm_wday=4, tm_yday=8, tm_isdst=0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将一个struct_time 转为时间戳</span></span><br><span class="line">t3 = time.mktime(t2)</span><br><span class="line">print(t3)</span><br><span class="line"><span class="comment"># 输出：1610114801.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将一个代表时间的元组或者strut_time 转为 格式化的字符串</span></span><br><span class="line">t4 = time.strftime(<span class="string">'%Y-%m-%d %X'</span>, time.localtime())</span><br><span class="line">print(t4)</span><br><span class="line"><span class="comment"># 输出：2021-01-08 22:06:41</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将一个格式化的字符串转为 strut_time</span></span><br><span class="line">t5 = time.strptime(t4, <span class="string">'%Y-%m-%d %X'</span>)</span><br><span class="line">print(t5)</span><br><span class="line"><span class="comment"># 输出：time.struct_time(tm_year=2021, tm_mon=1, tm_mday=8, tm_hour=22, tm_min=6, tm_sec=41, tm_wday=4, tm_yday=8, tm_isdst=-1)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、初识datetime"><a href="#2、初识datetime" class="headerlink" title="2、初识datetime"></a>2、初识datetime</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime,timedelta</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前日期和时间</span></span><br><span class="line">dt1 = datetime.now()</span><br><span class="line">print(dt1)</span><br><span class="line"><span class="comment"># 输出：2021-01-08 21:30:19.164887</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前时间去掉毫秒数</span></span><br><span class="line">print(datetime.now().replace(microsecond=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 输出：2021-01-08 21:30:19</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取指定日期和时间</span></span><br><span class="line">dt2 = datetime(<span class="number">2021</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">11</span>,<span class="number">15</span>,<span class="number">54</span>)</span><br><span class="line">print(dt2)</span><br><span class="line"><span class="comment"># 输出：2021-03-04 11:15:54</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># datetime 转为 timestamp</span></span><br><span class="line">ts = dt2.timestamp()</span><br><span class="line">print(ts)</span><br><span class="line"><span class="comment"># 输出：1614827754.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># timestamp 转为 datetime</span></span><br><span class="line">dt3 = datetime.fromtimestamp(ts)</span><br><span class="line">print(dt3)</span><br><span class="line"><span class="comment"># 输出：2021-03-04 11:15:54</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># str 转为 datetime</span></span><br><span class="line">dt4 = datetime.strptime(<span class="string">'2021-9-23 18:46:34'</span>, <span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line">print(dt4)</span><br><span class="line"><span class="comment"># 输出：2021-09-23 18:46:34</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># datetime 转为 str</span></span><br><span class="line">dt5 = dt4.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line">print(dt5)</span><br><span class="line"><span class="comment"># 输出：2021-09-23 18:46:34</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># datetime 加减</span></span><br><span class="line">dt6 = dt1 + timedelta(days=<span class="number">1</span>,hours=<span class="number">1</span>,minutes=<span class="number">1</span>,seconds=<span class="number">1</span>)</span><br><span class="line">print(dt6)</span><br><span class="line"><span class="comment"># 输出：2021-01-09 22:31:20.164887</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、计算两个时间点之间相差多少天、小时、分、秒"><a href="#3、计算两个时间点之间相差多少天、小时、分、秒" class="headerlink" title="3、计算两个时间点之间相差多少天、小时、分、秒"></a>3、计算两个时间点之间相差多少天、小时、分、秒</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两个时间点之间相差多少天、小时、分、秒</span></span><br><span class="line">start_time = <span class="string">'2020-12-14 09:13:44'</span></span><br><span class="line"><span class="comment"># 获得datetime类型的当前时间作为结束时间</span></span><br><span class="line">end_time = datetime.now().replace(microsecond=<span class="number">0</span>)</span><br><span class="line"><span class="comment"># 将开始时间转为datetime</span></span><br><span class="line">start_time1 = datetime.strptime(start_time, <span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line"><span class="comment"># 获得两个日期之间相差的秒数</span></span><br><span class="line">seconds = (end_time-start_time1).total_seconds()</span><br><span class="line"><span class="comment"># 根据相差的秒数转换成天、小时、分钟、秒</span></span><br><span class="line">str_day = str(seconds // <span class="number">86400</span>)[:<span class="number">-2</span>]</span><br><span class="line">str_hours = str((seconds % <span class="number">86400</span>) // <span class="number">3600</span>)[:<span class="number">-2</span>]</span><br><span class="line">str_minute = str(((seconds % <span class="number">86400</span>) % <span class="number">3600</span>) // <span class="number">60</span>)[:<span class="number">-2</span>]</span><br><span class="line">str_seconds = str(((seconds % <span class="number">86400</span>) % <span class="number">60</span>) % <span class="number">60</span>)[:<span class="number">-2</span>]</span><br><span class="line"><span class="comment"># 打印</span></span><br><span class="line">print(<span class="string">'开始时间：'</span> + str(start_time1))</span><br><span class="line">print(<span class="string">'结束时间：'</span> + str(end_time))</span><br><span class="line">print(<span class="string">'相差：'</span> + str_day + <span class="string">'天'</span> + str_hours + <span class="string">'小时'</span>+ str_minute + <span class="string">'分钟'</span> + str_seconds+ <span class="string">'秒'</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">输出：</span></span><br><span class="line"><span class="string">开始时间：2020-12-14 09:13:44</span></span><br><span class="line"><span class="string">结束时间：2021-01-08 22:10:30</span></span><br><span class="line"><span class="string">相差：25天12小时56分钟46秒</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+	<div>
+	  
+		<div>
+    
+          
+        
+          <div style="text-align:center;color: #ccc;font-size:14px;">-------------  End<i class="fa fa-star"></i>  -------------
+          </div>
+    
+          
+
+</div>
+
+	  
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/08/linux-jdk/" rel="next" title="Linux下安装JDK">
+                <i class="fa fa-chevron-left"></i> Linux下安装JDK
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -365,6 +524,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -385,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +650,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、初识time"><span class="nav-number">1.</span> <span class="nav-text">1、初识time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、初识datetime"><span class="nav-number">2.</span> <span class="nav-text">2、初识datetime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、计算两个时间点之间相差多少天、小时、分、秒"><span class="nav-number">3.</span> <span class="nav-text">3、计算两个时间点之间相差多少天、小时、分、秒</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -621,6 +809,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
