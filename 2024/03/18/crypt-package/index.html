@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="实战练习,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="爬取三国演义章节名称及内容">
-<meta name="keywords" content="实战练习">
+<meta name="description" content="加密、解密封装。包含AES加解密和MD5加密">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫实战练习（二）">
-<meta property="og:url" content="http://mtblog.top/2020/12/20/python-pachong-test2/index.html">
+<meta property="og:title" content="加解密封装">
+<meta property="og:url" content="http://mtblog.top/2024/03/18/crypt-package/index.html">
 <meta property="og:site_name" content="木木十三">
-<meta property="og:description" content="爬取三国演义章节名称及内容">
+<meta property="og:description" content="加密、解密封装。包含AES加解密和MD5加密">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-30T15:20:32.645Z">
+<meta property="og:updated_time" content="2024-03-19T07:28:34.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬虫实战练习（二）">
-<meta name="twitter:description" content="爬取三国演义章节名称及内容">
+<meta name="twitter:title" content="加解密封装">
+<meta name="twitter:description" content="加密、解密封装。包含AES加解密和MD5加密">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://mtblog.top/2020/12/20/python-pachong-test2/">
+  <link rel="canonical" href="http://mtblog.top/2024/03/18/crypt-package/">
 
 
 
 
 
-  <title>爬虫实战练习（二） | 木木十三</title>
+  <title>加解密封装 | 木木十三</title>
   
 
 
@@ -311,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2020/12/20/python-pachong-test2/">
+    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2024/03/18/crypt-package/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mu Tong">
@@ -328,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">爬虫实战练习（二）</h1>
+          <h1 class="post-title" itemprop="name headline">加解密封装</h1>
         
 
         <div class="post-meta">
@@ -340,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-20T23:36:10+08:00">
-                2020-12-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-03-18T17:18:20+08:00">
+                2024-03-18
               </time>
             
 
@@ -350,28 +349,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -394,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  312 字
+                  313 字
                 </span>
               
 
@@ -431,22 +408,10 @@
       
 
       
-        <p>爬取三国演义章节名称及内容</p>
+        <p>加密、解密封装。包含AES加解密和MD5加密</p>
 <a id="more"></a>
 
-<h3 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点"></a>一、知识点</h3><blockquote>
-<p>bs4解析数据</p>
-</blockquote>
-<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><blockquote>
-<ol>
-<li>请求章节页数据</li>
-<li>bs4处理章节页数据，获得章节名称及内容的url</li>
-<li>请求章节内容数据</li>
-<li>bs4处理章节内容数据，获得章节内容</li>
-<li>将章节内容存到文件中</li>
-</ol>
-</blockquote>
-<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  爬取三国演义章节标题和内容</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_url</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"https://www.shicimingju.com/book/sanguoyanyi.html"</span></span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_header</span><span class="params">()</span>:</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">'User-Agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"</span>,</span><br><span class="line">        <span class="string">'Content-Type'</span>: <span class="string">'application/json; charset=utf-8'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_main</span><span class="params">()</span>:</span></span><br><span class="line">    page_text = requests.get(get_url(),get_header()).text</span><br><span class="line">    <span class="comment"># 实例化一个BeautifulSoup对象，以lxml方式解析</span></span><br><span class="line">    soup = BeautifulSoup(page_text, <span class="string">'lxml'</span>)</span><br><span class="line">    <span class="comment"># 获取含有章节名称和详情url的li列表</span></span><br><span class="line">    li_list = soup.select(<span class="string">'.book-mulu &gt; ul &gt; li'</span>)</span><br><span class="line">    <span class="comment"># 打开文件</span></span><br><span class="line">    fp = open(<span class="string">'./sanguoyanyi.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="comment"># 处理页面数据</span></span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        time.sleep(<span class="number">3</span>)</span><br><span class="line">        <span class="comment"># 获取章节名</span></span><br><span class="line">        chapter_name = li.a.string</span><br><span class="line">        <span class="comment"># 获取章节内容的url</span></span><br><span class="line">        content_url = <span class="string">"https://www.shicimingju.com"</span> + li.a[<span class="string">'href'</span>]</span><br><span class="line">        <span class="comment"># 请求章节内容</span></span><br><span class="line">        content_text = requests.get(content_url, get_header()).text</span><br><span class="line">        <span class="comment"># 处理详情数据，获取目标内容</span></span><br><span class="line">        detail_soup = BeautifulSoup(content_text, <span class="string">'lxml'</span>)</span><br><span class="line">        chapter_content = detail_soup.find(<span class="string">'div'</span>,class_=<span class="string">'chapter_content'</span>).text</span><br><span class="line">        <span class="comment"># 将内容写入文件</span></span><br><span class="line">        fp.write(chapter_name + <span class="string">":\n"</span> + chapter_content + <span class="string">"\n"</span>)</span><br><span class="line">        print(<span class="string">"爬取成功"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    run_main()</span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> AES <span class="keyword">as</span> _AES</span><br><span class="line"><span class="keyword">from</span> cryptography.hazmat.primitives <span class="keyword">import</span> padding</span><br><span class="line"></span><br><span class="line"><span class="comment"># 密钥</span></span><br><span class="line">AES_KEY = base64.b64decode(<span class="string">"bG9uZ2dlPTY2NmxvdmUhIQ=="</span>).decode()  <span class="comment"># 请修改 一定是 16位的字符串</span></span><br><span class="line"><span class="comment"># 偏移量</span></span><br><span class="line">AES_IV = base64.b64decode(<span class="string">"bG9uZ2dlPTg4OGxvdmUhIQ=="</span>).decode()</span><br><span class="line"><span class="comment"># 加盐</span></span><br><span class="line">AES_SALT = base64.b64decode(<span class="string">"bG9uZ2dlPTk5OWxvdmUhIQ=="</span>).decode()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理AES加密和解密,(AES+CBC+pkcs7padding)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AESCrypt</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.IV = AES_IV.encode(<span class="string">"utf-8"</span>)</span><br><span class="line">        self.KEY = AES_KEY.encode(<span class="string">"utf-8"</span>)</span><br><span class="line">        self.SALT = AES_SALT.encode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pkcs7_padding</span><span class="params">(self, data, block_size=<span class="number">128</span>)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        密码必须满足8的倍数所以需要补位，PKCS7Padding用'\n'补位</span></span><br><span class="line"><span class="string">        :param data:</span></span><br><span class="line"><span class="string">        :param block_size:</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> isinstance(data, bytes):</span><br><span class="line">            data = data.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">        padder = padding.PKCS7(block_size).padder()</span><br><span class="line">        <span class="keyword">return</span> padder.update(data) + padder.finalize()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateKey</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        key加盐</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> hashlib.pbkdf2_hmac(hash_name=<span class="string">"sha1"</span>, password=self.KEY, salt=self.SALT, iterations=<span class="number">1</span>,</span><br><span class="line">                                   dklen=<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">aes_encrypt</span><span class="params">(self, password: str)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        aes加密</span></span><br><span class="line"><span class="string">        :param password:</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        key = self.generateKey()</span><br><span class="line">        padded_data = self.pkcs7_padding(password)</span><br><span class="line">        cipher = _AES.new(key, _AES.MODE_CBC, self.IV)</span><br><span class="line">        <span class="keyword">return</span> base64.b64encode(cipher.encrypt(padded_data)).decode()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">aes_decrypt</span><span class="params">(self, content: str)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        aes解密</span></span><br><span class="line"><span class="string">        :param content:</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        key = self.generateKey()</span><br><span class="line">        cipher = _AES.new(key, _AES.MODE_CBC, self.IV)</span><br><span class="line">        content = base64.b64decode(content)</span><br><span class="line">        <span class="keyword">return</span> (cipher.decrypt(content).decode(<span class="string">'utf-8'</span>)).replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理md5加密，未加盐</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MD5Crypt</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">md5_encrypt</span><span class="params">(self, content)</span>:</span></span><br><span class="line">        <span class="comment"># 创建对象</span></span><br><span class="line">        md = hashlib.md5(content.encode(<span class="string">'utf-8'</span>))</span><br><span class="line">        <span class="keyword">return</span> md.hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    ace = AESCrypt()</span><br><span class="line">    md5 = MD5Crypt()</span><br><span class="line">    enc_data = ace.aes_encrypt(<span class="string">"123456"</span>)</span><br><span class="line">    print(<span class="string">"加密:&gt;&gt;&gt;&gt;&gt;&#123;&#125;"</span>.format(enc_data))</span><br><span class="line">    dec_data = ace.aes_decrypt(enc_data)</span><br><span class="line">    print(<span class="string">"解码:&gt;&gt;&gt;&gt;&gt;&#123;&#125;"</span>.format(dec_data))</span><br><span class="line">    c = md5.md5_encrypt(<span class="string">"123456"</span>)</span><br><span class="line">    print(c)</span><br></pre></td></tr></table></figure>
 
 
       
@@ -477,12 +442,6 @@
 	</div>
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/实战练习/" rel="tag"><i class="fa fa-tag"></i> 实战练习</a>
-          
-        </div>
-      
 
       
       
@@ -492,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/12/20/python-error-deal/" rel="next" title="python问题处理">
-                <i class="fa fa-chevron-left"></i> python问题处理
+              <a href="/2024/03/18/request-package/" rel="next" title="接口请求的封装">
+                <i class="fa fa-chevron-left"></i> 接口请求的封装
               </a>
             
           </div>
@@ -502,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/12/28/python-pachong-test3/" rel="prev" title="爬虫实战练习（三）">
-                爬虫实战练习（三） <i class="fa fa-chevron-right"></i>
+              <a href="/2024/03/19/shell/" rel="prev" title="Shell及Linux常用命令">
+                Shell及Linux常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -556,17 +515,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -644,22 +594,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、知识点"><span class="nav-number">1.</span> <span class="nav-text">一、知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、思路"><span class="nav-number">2.</span> <span class="nav-text">二、思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、代码"><span class="nav-number">3.</span> <span class="nav-text">三、代码</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
