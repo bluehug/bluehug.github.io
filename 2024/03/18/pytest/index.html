@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="基础知识,">
 
 
 
@@ -80,13 +80,14 @@
 
 
 <meta name="description" content="pytest基础知识">
+<meta name="keywords" content="基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pytest基础知识">
 <meta property="og:url" content="http://mtblog.top/2024/03/18/pytest/index.html">
 <meta property="og:site_name" content="木木十三">
 <meta property="og:description" content="pytest基础知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2024-03-19T07:32:05.249Z">
+<meta property="og:updated_time" content="2024-04-02T05:41:51.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pytest基础知识">
 <meta name="twitter:description" content="pytest基础知识">
@@ -350,6 +351,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/pytest/" itemprop="url" rel="index">
+                    <span itemprop="name">pytest</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -459,7 +482,7 @@
 <h3 id="5-2-使用pytest-xfail函数"><a href="#5-2-使用pytest-xfail函数" class="headerlink" title="5.2 使用pytest.xfail函数"></a>5.2 使用<code>pytest.xfail</code>函数</h3><ul>
 <li>在测试用例函数内部，可以使用<code>pytest.xfail(reason)</code>来标记测试用例为预期失败。调用此函数后，测试用例的后续代码将不会执行。</li>
 </ul>
-<h2 id="6-测试用例参数化"><a href="#6-测试用例参数化" class="headerlink" title="6 测试用例参数化"></a>6 测试用例参数化</h2><p>可以使用<code>@pytest.mark.parametrize</code>装饰器来对测试用例进行参数化，从而运行多个具有不同输入参数的测试。</p>
+<h2 id="6-测试用例参数化"><a href="#6-测试用例参数化" class="headerlink" title="6 测试用例参数化"></a>6 测试用例参数化</h2><p>可以使用<code>@pytest.mark.parametrize</code>装饰器来对测试用例进行参数化，从而运行多个具有不同输入参数的测试。该装饰器接收参数和列表，参数支持多个，解包进行赋值</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest  </span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.mark.parametrize("input, expected, skip_reason", [  </span></span><br><span class="line">    (<span class="number">1</span>, <span class="number">2</span>, <span class="literal">None</span>),  </span><br><span class="line">    (<span class="number">2</span>, <span class="number">5</span>, <span class="string">"this case is known to fail"</span>),  <span class="comment"># 预期失败的实例  </span></span><br><span class="line">    (<span class="number">3</span>, <span class="number">6</span>, <span class="literal">None</span>),  </span><br><span class="line">    pytest.param(<span class="number">4</span>, <span class="number">8</span>, marks=pytest.mark.skip(reason=<span class="string">"skip this case"</span>)),  <span class="comment"># 跳过的实例  </span></span><br><span class="line">])  </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_multiplication</span><span class="params">(input, expected, skip_reason)</span>:</span>  </span><br><span class="line">    <span class="keyword">if</span> skip_reason:  </span><br><span class="line">        pytest.skip(skip_reason)  </span><br><span class="line">    <span class="keyword">if</span> expected == <span class="number">5</span>:  </span><br><span class="line">        pytest.xfail(<span class="string">"Known failure"</span>)  </span><br><span class="line">    <span class="keyword">assert</span> input * <span class="number">2</span> == expected</span><br></pre></td></tr></table></figure>
 
 <p>在这个例子中，我们添加了一个额外的<code>skip_reason</code>参数到参数化列表中。如果<code>skip_reason</code>有值，我们使用<code>pytest.skip()</code>来跳过该实例。对于预期失败的实例，我们直接在测试函数内部使用<code>pytest.xfail()</code>。注意，你还可以使用<code>pytest.param()</code>与<code>marks</code>参数来直接给特定参数化实例添加标记。</p>
@@ -536,6 +559,12 @@
 	  
 	</div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/基础知识/" rel="tag"><i class="fa fa-tag"></i> 基础知识</a>
+          
+        </div>
       
 
       
@@ -637,7 +666,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -648,7 +677,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -659,7 +688,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
