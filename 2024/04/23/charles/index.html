@@ -88,7 +88,7 @@
 <meta property="og:description" content="charles的基本使用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://mtblog.top/2024/04/23/charles/Snipaste_2024-04-23_17-56-50.png">
-<meta property="og:updated_time" content="2024-04-23T14:49:43.630Z">
+<meta property="og:updated_time" content="2024-05-13T02:47:03.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="charles">
 <meta name="twitter:description" content="charles的基本使用">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  371 字
+                  654 字
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -448,7 +448,7 @@
 <h2 id="4-移动端设置"><a href="#4-移动端设置" class="headerlink" title="4 移动端设置"></a>4 移动端设置</h2><p>针对移动端，确保移动端与PC端处于同一局域网下</p>
 <ul>
 <li>手机上进入wifi设置页面，手动设置代理信息，主机名称填写PC电脑的IP地址，端口填写charles中设置的代理端口。</li>
-<li>手机的浏览器中输入<code>chls.pro/ssl</code>进行搜索，会让下载证书，下载后进行安装。</li>
+<li>手机的浏览器中输入<code>chls.pro/ssl</code>进行搜索，会让下载证书，下载后进行安装。证书后缀名<code>crt</code>，若下载的后缀名不符，需要改成此后缀名。</li>
 </ul>
 <h2 id="5-与Fiddler的区别"><a href="#5-与Fiddler的区别" class="headerlink" title="5 与Fiddler的区别"></a>5 与Fiddler的区别</h2><ul>
 <li>Fiddler免费，Charles收费</li>
@@ -456,6 +456,28 @@
 <li>Charles具有map文件的功能，而Fiddler不支持</li>
 <li>Fidder主要运行在Windows操作系统上，而Charles支持多种操作系统，如macOS和Linux</li>
 </ul>
+<h2 id="6-断点调试"><a href="#6-断点调试" class="headerlink" title="6 断点调试"></a>6 断点调试</h2><p>方法一：</p>
+<ol>
+<li>启动Charles后，点击“Proxy”菜单，然后选择“Breakpoint Settings…”。</li>
+<li>勾选“Enable Breakpoints”以启用断点功能。</li>
+<li>点击“Add”新增断点规则。断点规则包括以下几个字段：</li>
+</ol>
+<ul>
+<li>Scheme：拦截进行断点的接口方法，选项有GET和POST。</li>
+<li>Protocol：协议，选项有HTTP和HTTPS。</li>
+<li>HOST：域名或IP地址。</li>
+<li>Path：路径。</li>
+<li>Query：URL中的查询参数。</li>
+</ul>
+<p>根据具体需求填写这些字段，以定义断点的规则。</p>
+<p>方法二：</p>
+<ol>
+<li>在Charles中，找到需要进行断点调试的接口。</li>
+<li>在该接口处，鼠标右击，选择“breakpoints”以允许本接口使用断点功能。</li>
+<li>随后，断点配置会自动添加到“Breakpoint Settings…”中，双击配置规则，补充剩余的信息。</li>
+</ol>
+<h2 id="7-问题解决"><a href="#7-问题解决" class="headerlink" title="7 问题解决"></a>7 问题解决</h2><p>针对ios10.3之后的版本，需要在设置—&gt;通用—&gt;关于本机—&gt;证书信任设置中信任安装好的证书</p>
+<p>针对安卓高版本，对于用户安装的证书，没有root权限，做不到完全信任。</p>
 
       
     </div>
@@ -591,7 +613,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -602,7 +624,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -662,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装与激活"><span class="nav-number">1.</span> <span class="nav-text">1 安装与激活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置代理信息"><span class="nav-number">2.</span> <span class="nav-text">2 设置代理信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-设置代理信息"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 设置代理信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-设置SSL"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 设置SSL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装证书"><span class="nav-number">3.</span> <span class="nav-text">3 安装证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-移动端设置"><span class="nav-number">4.</span> <span class="nav-text">4 移动端设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-与Fiddler的区别"><span class="nav-number">5.</span> <span class="nav-text">5 与Fiddler的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装与激活"><span class="nav-number">1.</span> <span class="nav-text">1 安装与激活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置代理信息"><span class="nav-number">2.</span> <span class="nav-text">2 设置代理信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-设置代理信息"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 设置代理信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-设置SSL"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 设置SSL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装证书"><span class="nav-number">3.</span> <span class="nav-text">3 安装证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-移动端设置"><span class="nav-number">4.</span> <span class="nav-text">4 移动端设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-与Fiddler的区别"><span class="nav-number">5.</span> <span class="nav-text">5 与Fiddler的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-断点调试"><span class="nav-number">6.</span> <span class="nav-text">6 断点调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-问题解决"><span class="nav-number">7.</span> <span class="nav-text">7 问题解决</span></a></li></ol></div>
             
 
           </div>

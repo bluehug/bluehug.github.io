@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="adb,">
+  <meta name="keywords" content="基础知识,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="adb连接模拟器  adb连接手机  adb查看日志">
-<meta name="keywords" content="adb">
+<meta name="description" content="FastAPI+Charles进行数据Mock">
+<meta name="keywords" content="基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="adb">
-<meta property="og:url" content="http://mtblog.top/2020/08/17/adb/index.html">
+<meta property="og:title" content="mock">
+<meta property="og:url" content="http://mtblog.top/2024/05/15/mock/index.html">
 <meta property="og:site_name" content="木木十三">
-<meta property="og:description" content="adb连接模拟器  adb连接手机  adb查看日志">
+<meta property="og:description" content="FastAPI+Charles进行数据Mock">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-17T15:24:19.182Z">
+<meta property="og:updated_time" content="2024-05-15T13:47:00.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="adb">
-<meta name="twitter:description" content="adb连接模拟器  adb连接手机  adb查看日志">
+<meta name="twitter:title" content="mock">
+<meta name="twitter:description" content="FastAPI+Charles进行数据Mock">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://mtblog.top/2020/08/17/adb/">
+  <link rel="canonical" href="http://mtblog.top/2024/05/15/mock/">
 
 
 
 
 
-  <title>adb | 木木十三</title>
+  <title>mock | 木木十三</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2020/08/17/adb/">
+    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2024/05/15/mock/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mu Tong">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">adb</h1>
+          <h1 class="post-title" itemprop="name headline">mock</h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-17T23:10:41+08:00">
-                2020-08-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-05-15T21:24:36+08:00">
+                2024-05-15
               </time>
             
 
@@ -363,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/软件测试工具/" itemprop="url" rel="index">
-                    <span itemprop="name">软件测试工具</span>
+                  <a href="/categories/mock/" itemprop="url" rel="index">
+                    <span itemprop="name">mock</span>
                   </a>
                 </span>
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  508 字
+                  414 字
                 </span>
               
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -431,135 +431,28 @@
       
 
       
-        <ol>
-<li><p>adb连接模拟器</p>
-</li>
-<li><p>adb连接手机</p>
-</li>
-<li><p>adb查看日志</p>
-</li>
-</ol>
+        <p>FastAPI+Charles进行数据Mock</p>
 <a id="more"></a>
 
-<h3 id="安装adb"><a href="#安装adb" class="headerlink" title="安装adb"></a>安装adb</h3><p><a href="https://developer.android.google.cn/studio/releases/platform-tools.html" target="_blank" rel="noopener">https://developer.android.google.cn/studio/releases/platform-tools.html</a></p>
-<h3 id="adb连接mumu模拟器"><a href="#adb连接mumu模拟器" class="headerlink" title="adb连接mumu模拟器"></a>adb连接mumu模拟器</h3><p>运行cmd，切换到adb命令目录或先配置好环境变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb connect 127.0.0.1:7555</span><br></pre></td></tr></table></figure>
+<h2 id="1-场景使用"><a href="#1-场景使用" class="headerlink" title="1 场景使用"></a>1 场景使用</h2><p>在以下场景可以用上Mock：</p>
+<ul>
+<li>存在第三方接口，但是第三方接口不好调用，比如第三方接口需要内网，需要VPN，这种情况下，如果进行接口自动化或者演示或者其他业务场景，那么就需要模拟出该接口的返回数据</li>
+<li>当一些特殊的测试场景，如测试字段超长显示，测试数据在较多的情况下的滑动/显示效果，这个时候就可以用到Mock</li>
+</ul>
+<h2 id="2-解决方案"><a href="#2-解决方案" class="headerlink" title="2 解决方案"></a>2 解决方案</h2><ul>
+<li>FastAPI：是python中一个快速构建API的的Web框架，利用FastAPI进行构造接口名称和返回的数据，运行就后可以当作接口的服务端进行调用</li>
+<li>Charles：进行抓包和代理，利用Charles的代理，将原本的接口请求代理到FastAPI中构造的接口，这个时候就会返回构造的数据了。</li>
+</ul>
+<p>先进行fastapi安装</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install fastapi</span><br><span class="line">pip install uvicorn</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看设备是否已连接"><a href="#查看设备是否已连接" class="headerlink" title="查看设备是否已连接"></a>查看设备是否已连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+<p>编写代码创建一个main.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line"></span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get("/tree")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_louceng</span><span class="params">()</span>:</span></span><br><span class="line">    json_data = &#123;<span class="string">"message"</span>: <span class="string">"Hello"</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> json_data</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看设备连接状态"><a href="#查看设备连接状态" class="headerlink" title="查看设备连接状态"></a>查看设备连接状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb get-state</span><br></pre></td></tr></table></figure>
+<p>在控制台运行代码，产生一个服务端。如上代码运行后，访问127.0.0.1:8000/tree就会得到json_data数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fastapidemo是代码文件名称，app是实例化的对象</span></span><br><span class="line">uvicorn fastapidemo:app --reload</span><br></pre></td></tr></table></figure>
 
-<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">offline</td>
-<td align="center">设备连接异常</td>
-</tr>
-<tr>
-<td align="center">device</td>
-<td align="center">正常</td>
-</tr>
-<tr>
-<td align="center">unknown</td>
-<td align="center">没有连接设备</td>
-</tr>
-</tbody></table>
-<h3 id="adb安装apk文件"><a href="#adb安装apk文件" class="headerlink" title="adb安装apk文件"></a>adb安装apk文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb install apk地址</span><br></pre></td></tr></table></figure>
-
-<h3 id="adb-抓取日志"><a href="#adb-抓取日志" class="headerlink" title="adb 抓取日志"></a>adb 抓取日志</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat</span><br></pre></td></tr></table></figure>
-
-<p><code>ctrl+c</code>结束查看，可查看手机四个缓冲区日志，包括radio、system、main、event。</p>
-<table>
-<thead>
-<tr>
-<th align="center">缓冲区</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">radio</td>
-<td align="center">存放通信的日志，比如通话短信</td>
-</tr>
-<tr>
-<td align="center">system</td>
-<td align="center">系统组件日志</td>
-</tr>
-<tr>
-<td align="center">main</td>
-<td align="center">手机的应用软件的日志</td>
-</tr>
-<tr>
-<td align="center">event</td>
-<td align="center">手机按键输出等事件日志</td>
-</tr>
-</tbody></table>
-<p>不指定缓冲区的话，默认抓取system和main。<br>要指定缓冲区的话，命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat -b 缓冲区</span><br></pre></td></tr></table></figure>
-
-<p>清理日志信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat -c</span><br></pre></td></tr></table></figure>
-
-<p>将日志信息输出到指定文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat -b event &gt; E:\log.txt</span><br></pre></td></tr></table></figure>
-
-<p>logcat是实时的，即在输出日志时操作软件，也可以实时更新日志。<br>日志文件查看：</p>
-<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">D</td>
-<td align="center">debug</td>
-</tr>
-<tr>
-<td align="center">I</td>
-<td align="center">info</td>
-</tr>
-<tr>
-<td align="center">E</td>
-<td align="center">error</td>
-</tr>
-<tr>
-<td align="center">W</td>
-<td align="center">warm</td>
-</tr>
-</tbody></table>
-<p>只输出错误信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat *:E</span><br></pre></td></tr></table></figure>
-
-<h3 id="adb通过WLAN连接到设备"><a href="#adb通过WLAN连接到设备" class="headerlink" title="adb通过WLAN连接到设备"></a>adb通过WLAN连接到设备</h3><ol>
-<li><p>adb安装在pc电脑上，电脑与手机处于同一WLAN下，打开手机的<code>开发者选项</code>和<code>usb调试模式</code>，以下步骤用的是红米note8。</p>
-</li>
-<li><p>使用 USB 数据线将手机连接到电脑。</p>
-</li>
-<li><p>设置目标设备以监听端口 5555 上的 TCP/IP 连接。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb tcpip 5555</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>断开数据线连接</p>
-</li>
-<li><p>找到设备的IP地址</p>
-</li>
-<li><p>通过IP地址连接到设备</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb connect IP地址:5555</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>确认连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果 adb 连接断开：<br>(1) 确保电脑仍与 Android 设备连接到同一个 WLAN 网络。<br>(2) 通过再次执行 adb connect 步骤重新连接。<br>(3) 如果上述操作未解决问题，重置 adb ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb kill-server</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>然后重头操作。</p>
-<h3 id="adb帮助文档"><a href="#adb帮助文档" class="headerlink" title="adb帮助文档"></a>adb帮助文档</h3><p><a href="https://developer.android.google.cn/studio/command-line/adb" target="_blank" rel="noopener">https://developer.android.google.cn/studio/command-line/adb</a></p>
+<p>在Charles的Tools—&gt;Map remote中设置接口的代理信息，也可以抓包到要代理的接口后，选中接口点击右键，在右键菜单中点击Map remote。设置好接口代理信息后，再次进行抓包时，代理的接口就会请求FastAPI中的接口。</p>
 
       
     </div>
@@ -591,7 +484,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/adb/" rel="tag"><i class="fa fa-tag"></i> adb</a>
+            <a href="/tags/基础知识/" rel="tag"><i class="fa fa-tag"></i> 基础知识</a>
           
         </div>
       
@@ -604,15 +497,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2024/04/25/httprunner/" rel="next" title="HttpRunner">
+                <i class="fa fa-chevron-left"></i> HttpRunner
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/11/10/mysqlTest1/" rel="prev" title="MySQL练习（1）">
-                MySQL练习（1） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -762,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装adb"><span class="nav-number">1.</span> <span class="nav-text">安装adb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb连接mumu模拟器"><span class="nav-number">2.</span> <span class="nav-text">adb连接mumu模拟器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看设备是否已连接"><span class="nav-number">3.</span> <span class="nav-text">查看设备是否已连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看设备连接状态"><span class="nav-number">4.</span> <span class="nav-text">查看设备连接状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb安装apk文件"><span class="nav-number">5.</span> <span class="nav-text">adb安装apk文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb-抓取日志"><span class="nav-number">6.</span> <span class="nav-text">adb 抓取日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb通过WLAN连接到设备"><span class="nav-number">7.</span> <span class="nav-text">adb通过WLAN连接到设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb帮助文档"><span class="nav-number">8.</span> <span class="nav-text">adb帮助文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-场景使用"><span class="nav-number">1.</span> <span class="nav-text">1 场景使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-解决方案"><span class="nav-number">2.</span> <span class="nav-text">2 解决方案</span></a></li></ol></div>
             
 
           </div>
