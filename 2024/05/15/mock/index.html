@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="木木十三">
 <meta property="og:description" content="FastAPI+Charles进行数据Mock">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2024-05-15T13:47:00.816Z">
+<meta property="og:updated_time" content="2024-05-17T09:17:37.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mock">
 <meta name="twitter:description" content="FastAPI+Charles进行数据Mock">
@@ -450,7 +450,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line"></span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get("/tree")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_louceng</span><span class="params">()</span>:</span></span><br><span class="line">    json_data = &#123;<span class="string">"message"</span>: <span class="string">"Hello"</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> json_data</span><br></pre></td></tr></table></figure>
 
 <p>在控制台运行代码，产生一个服务端。如上代码运行后，访问127.0.0.1:8000/tree就会得到json_data数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fastapidemo是代码文件名称，app是实例化的对象</span></span><br><span class="line">uvicorn fastapidemo:app --reload</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fastapidemo是代码文件名称，app是实例化的对象</span></span><br><span class="line">uvicorn fastapi:app --reload</span><br></pre></td></tr></table></figure>
 
 <p>在Charles的Tools—&gt;Map remote中设置接口的代理信息，也可以抓包到要代理的接口后，选中接口点击右键，在右键菜单中点击Map remote。设置好接口代理信息后，再次进行抓包时，代理的接口就会请求FastAPI中的接口。</p>
 
@@ -588,7 +588,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
