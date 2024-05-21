@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="基础知识,">
+  <meta name="keywords" content="学习笔记,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Shell基础知识及Linux常用命令">
-<meta name="keywords" content="基础知识">
+<meta name="description" content="动态创建一个函数（带有参数变量）">
+<meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell及Linux常用命令">
-<meta property="og:url" content="http://mtblog.top/2024/03/19/shell/index.html">
+<meta property="og:title" content="python中动态创建函数">
+<meta property="og:url" content="http://mtblog.top/2024/05/21/create-function/index.html">
 <meta property="og:site_name" content="木木十三">
-<meta property="og:description" content="Shell基础知识及Linux常用命令">
+<meta property="og:description" content="动态创建一个函数（带有参数变量）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2024-04-12T02:38:22.372Z">
+<meta property="og:updated_time" content="2024-05-21T15:08:37.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell及Linux常用命令">
-<meta name="twitter:description" content="Shell基础知识及Linux常用命令">
+<meta name="twitter:title" content="python中动态创建函数">
+<meta name="twitter:description" content="动态创建一个函数（带有参数变量）">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://mtblog.top/2024/03/19/shell/">
+  <link rel="canonical" href="http://mtblog.top/2024/05/21/create-function/">
 
 
 
 
 
-  <title>Shell及Linux常用命令 | 木木十三</title>
+  <title>python中动态创建函数 | 木木十三</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2024/03/19/shell/">
+    <link itemprop="mainEntityOfPage" href="http://mtblog.top/2024/05/21/create-function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mu Tong">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Shell及Linux常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">python中动态创建函数</h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-03-19T14:03:51+08:00">
-                2024-03-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-05-21T21:57:57+08:00">
+                2024-05-21
               </time>
             
 
@@ -363,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  656 字
+                  1.2k 字
                 </span>
               
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -431,107 +431,29 @@
       
 
       
-        <p>Shell基础知识及Linux常用命令</p>
+        <p>动态创建一个函数（带有参数变量）</p>
 <a id="more"></a>
 
-<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = "hello word"</span><br><span class="line">echo $a</span><br></pre></td></tr></table></figure>
+<p>python中动态创建函数。有以下几种方案可以进行动态创建：</p>
+<ol>
+<li>可以使用闭包</li>
+<li>lambda表达式</li>
+<li>可以使用<code>types</code>模块中的<code>FunctionType</code></li>
+</ol>
+<p>其中第三种比较复杂。</p>
+<p>在进行接口自动化测试框架的搭建过程中，需要将测试用例数据传入一个名称以<code>test_</code>开头的方法模板中，然后将该方法模板通过反射注入到测试模块当中。当运行<code>pytest</code>时就可以执行该方法。</p>
+<p>此前已经通过模拟闭包解决了方法模板中未正确引用测试数据的问题，但是仍有一个问题，那就是目前定义的方法模板中无法加入参数（测试数据参数是在函数内调用的，此处指的是无法在函数上进行传参）。</p>
+<p>如果能够实现在函数上传参，就可以在<code>conftest.py</code>文件中定义<code>fixture</code>，然后将该<code>fixture</code>在方法模板的函数上作为参数名称进行引用，达到使用<code>fixture</code>的目的。</p>
+<p>以下代码的原理参考：<a href="https://zhuanlan.zhihu.com/p/386276353" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/386276353</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># conftest.py</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> types</span><br><span class="line"><span class="keyword">from</span> inspect <span class="keyword">import</span> Signature, Parameter</span><br><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> Sequence, Callable, Mapping, Any</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> allure</span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"><span class="keyword">from</span> _pytest.python <span class="keyword">import</span> Module</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> utils.path_util <span class="keyword">import</span> path_util</span><br><span class="line"><span class="keyword">from</span> utils.yaml_util <span class="keyword">import</span> YamlUtil</span><br><span class="line"><span class="comment"># 创建函数的方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_function_parameters</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        func: Callable[[Mapping[str, Any]], Any],</span></span></span><br><span class="line"><span class="function"><span class="params">        parameters: Sequence[Parameter],</span></span></span><br><span class="line"><span class="function"><span class="params">        documentation=None,</span></span></span><br><span class="line"><span class="function"><span class="params">        func_name=None,</span></span></span><br><span class="line"><span class="function"><span class="params">        func_filename=None)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    :param func: 函数体内执行的方法</span></span><br><span class="line"><span class="string">    :param parameters: 函数上的参数</span></span><br><span class="line"><span class="string">    :param documentation: 函数的注释</span></span><br><span class="line"><span class="string">    :param func_name: 函数的名称</span></span><br><span class="line"><span class="string">    :param func_filename: 函数所属的文件名称</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    new_signature = Signature(parameters) <span class="comment"># Checks the parameter consistency</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pass_locals</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> dict_func(locals()) <span class="comment"># noqa: F821 TODO</span></span><br><span class="line">    code = pass_locals.__code__</span><br><span class="line">    mod_co_argcount = len(parameters)</span><br><span class="line">    mod_co_nlocals = len(parameters)</span><br><span class="line">    mod_co_varnames = tuple(param.name <span class="keyword">for</span> param <span class="keyword">in</span> parameters)</span><br><span class="line">    mod_co_name = func_name <span class="keyword">or</span> code.co_name</span><br><span class="line">    <span class="keyword">if</span> func_filename:</span><br><span class="line">        mod_co_filename = func_filename</span><br><span class="line">        mod_co_firstlineno = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        mod_co_filename = code.co_filename</span><br><span class="line">        mod_co_firstlineno = code.co_firstlineno</span><br><span class="line">    <span class="keyword">if</span> sys.version_info &gt;= (<span class="number">3</span>, <span class="number">8</span>):</span><br><span class="line">        modified_code = code.replace(</span><br><span class="line">            co_argcount=mod_co_argcount,</span><br><span class="line">            co_nlocals=mod_co_nlocals,</span><br><span class="line">            co_varnames=mod_co_varnames,</span><br><span class="line">            co_filename=mod_co_filename,</span><br><span class="line">            co_name=mod_co_name,</span><br><span class="line">            co_firstlineno=mod_co_firstlineno,</span><br><span class="line">            )</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        modified_code = types.CodeType(</span><br><span class="line">            mod_co_argcount,</span><br><span class="line">            code.co_kwonlyargcount,</span><br><span class="line">            mod_co_nlocals,</span><br><span class="line">            code.co_stacksize,</span><br><span class="line">            code.co_flags,</span><br><span class="line">            code.co_code,</span><br><span class="line">            code.co_consts,</span><br><span class="line">            code.co_names,</span><br><span class="line">            mod_co_varnames,</span><br><span class="line">            mod_co_filename,</span><br><span class="line">            mod_co_name,</span><br><span class="line">            mod_co_firstlineno,</span><br><span class="line">            code.co_lnotab</span><br><span class="line">            )</span><br><span class="line">    default_arg_values = tuple(p.default <span class="keyword">for</span> p <span class="keyword">in</span> parameters <span class="keyword">if</span> p.default != Parameter.empty) <span class="comment">#!argdefs "starts from the right"/"is right-aligned"</span></span><br><span class="line">    modified_func = types.FunctionType(modified_code, &#123;<span class="string">'dict_func'</span>: func, <span class="string">'locals'</span>: locals&#125;, name=func_name,argdefs=default_arg_values)</span><br><span class="line">    modified_func.__doc__ = documentation</span><br><span class="line">    modified_func.__signature__ = new_signature</span><br><span class="line">    <span class="keyword">return</span> modified_func</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pytest_collect_file</span><span class="params">(file_path: Path, parent)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> file_path.suffix == <span class="string">".yaml"</span> <span class="keyword">and</span> <span class="string">"mall"</span> <span class="keyword">in</span> str(file_path):</span><br><span class="line">        <span class="comment"># 得到文件名称（不含后缀）</span></span><br><span class="line">        yaml_file = os.path.splitext(os.path.basename(file_path))[<span class="number">0</span>]</span><br><span class="line">        pytest_module = Module.from_parent(parent, path=file_path)</span><br><span class="line">        <span class="comment"># 动态创建module</span></span><br><span class="line">        myModule = types.ModuleType(file_path.stem)</span><br><span class="line">        <span class="comment"># 解析yaml内容</span></span><br><span class="line">        yaml_info_dict = YamlUtil(file_path).read_yaml()</span><br><span class="line">        <span class="comment"># 读取fixture的值</span></span><br><span class="line">        p_list = yaml_info_dict[<span class="string">"config"</span>][<span class="string">"fixture"</span>]</span><br><span class="line">        <span class="comment"># 将fixture加入到数组中</span></span><br><span class="line">        parameters = []</span><br><span class="line">        <span class="keyword">for</span> p <span class="keyword">in</span> p_list:</span><br><span class="line">            parameters.append(Parameter(<span class="string">f'<span class="subst">&#123;p&#125;</span>'</span>, Parameter.POSITIONAL_OR_KEYWORD))</span><br><span class="line">        <span class="comment"># 获取测试步骤数据</span></span><br><span class="line">        yaml_steps = yaml_info_dict[<span class="string">"teststeps"</span>]</span><br><span class="line">        <span class="comment"># 遍历测试用例步骤</span></span><br><span class="line">        <span class="comment"># flag用于递增，加在方法名称上用来区分不同的方法名</span></span><br><span class="line">        flag = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> step <span class="keyword">in</span> yaml_steps:</span><br><span class="line">            <span class="comment"># 定义要动态创建的方法，使用了闭包，传递step参数</span></span><br><span class="line">            <span class="function"><span class="keyword">def</span> <span class="title">function_outer</span><span class="params">(**kwargs)</span>:</span></span><br><span class="line">                <span class="function"><span class="keyword">def</span> <span class="title">function_template</span><span class="params">(*arg, **kwarg)</span>:</span></span><br><span class="line">                    print(kwargs)</span><br><span class="line">                <span class="keyword">return</span> function_template</span><br><span class="line"></span><br><span class="line">            func = function_outer(**step)</span><br><span class="line">            <span class="comment"># 创建函数，主要用于动态传递参数</span></span><br><span class="line">            f = create_function_from_parameters(func=func,</span><br><span class="line">                                           parameters=parameters,</span><br><span class="line">                                           documentation=<span class="literal">None</span>,</span><br><span class="line">                                           func_name=<span class="string">"test_"</span>+yaml_file+str(flag),</span><br><span class="line">                                           func_filename=<span class="string">"test_case.py"</span>)</span><br><span class="line">            setattr(myModule, <span class="string">"test_"</span>+yaml_file+str(flag), f)</span><br><span class="line">            flag = flag+<span class="number">1</span></span><br><span class="line">        <span class="comment"># 重写_getobj属性，使用了lambda匿名函数</span></span><br><span class="line">        pytest_module._getobj = <span class="keyword">lambda</span>: myModule</span><br><span class="line">        <span class="keyword">return</span> pytest_module</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(scope="function")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">request_hook</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"--------------request------"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(scope="function")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">response_hook</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"--------------response------"</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-字符串"><a href="#2-字符串" class="headerlink" title="2 字符串"></a>2 字符串</h2><h3 id="2-1-字符串拼接"><a href="#2-1-字符串拼接" class="headerlink" title="2.1 字符串拼接"></a>2.1 字符串拼接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = "hello"</span><br><span class="line">b = "word"</span><br><span class="line">echo $a$b</span><br></pre></td></tr></table></figure>
+<p>yaml数据如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">config:</span></span><br><span class="line"><span class="attr">  variables:</span></span><br><span class="line"><span class="attr">    password:</span> <span class="string">macro123</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">admin</span></span><br><span class="line"><span class="attr">  fixture:</span> <span class="string">[request_hook,</span> <span class="string">response_hook]</span></span><br><span class="line"><span class="attr">teststeps:</span></span><br><span class="line"><span class="bullet">-</span></span><br><span class="line"><span class="attr">  func_name:</span> <span class="string">login</span></span><br><span class="line"><span class="attr">  skip:</span> <span class="string">手动跳过</span></span><br><span class="line"><span class="attr">  epic:</span> <span class="string">mall商城</span></span><br><span class="line"><span class="attr">  feature:</span> <span class="string">登录</span></span><br><span class="line"><span class="attr">  story:</span> <span class="string">登录</span></span><br><span class="line"><span class="attr">  title:</span> <span class="string">正常账号密码登录</span></span><br><span class="line"><span class="attr">  requests:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">$&#123;host&#125;/admin/login</span></span><br><span class="line"><span class="attr">    method:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">    headers:</span></span><br><span class="line"><span class="attr">    params:</span></span><br><span class="line"><span class="attr">    data:</span></span><br><span class="line"><span class="attr">    json:</span></span><br><span class="line"><span class="attr">      password:</span> <span class="string">$&#123;password&#125;</span></span><br><span class="line"><span class="attr">      username:</span> <span class="string">$&#123;username&#125;</span></span><br><span class="line"><span class="comment">#  setup_hooks: $&#123;__setup(requests_info)&#125;</span></span><br><span class="line"><span class="attr">  teardown_hooks:</span></span><br><span class="line"><span class="attr">  extract:</span></span><br><span class="line"><span class="attr">    token:</span> <span class="string">['jsonpath',</span> <span class="string">'$.data.token'</span><span class="string">]</span></span><br><span class="line"><span class="attr">  validate:</span></span><br><span class="line"><span class="attr">    code:</span> <span class="number">20022</span></span><br><span class="line"><span class="attr">    message:</span> <span class="string">成功111</span></span><br><span class="line"><span class="bullet">-</span></span><br><span class="line"><span class="attr">  func_name:</span> <span class="string">login</span></span><br><span class="line"><span class="attr">  skip:</span> <span class="string">手动跳过2</span></span><br><span class="line"><span class="attr">  epic:</span> <span class="string">mall商城</span></span><br><span class="line"><span class="attr">  feature:</span> <span class="string">登录</span></span><br><span class="line"><span class="attr">  story:</span> <span class="string">登录</span></span><br><span class="line"><span class="attr">  title:</span> <span class="string">正常账号密码登录</span></span><br><span class="line"><span class="attr">  requests:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">$&#123;host&#125;/admin/login</span></span><br><span class="line"><span class="attr">    method:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">    headers:</span></span><br><span class="line"><span class="attr">    params:</span></span><br><span class="line"><span class="attr">    data:</span></span><br><span class="line"><span class="attr">    json:</span></span><br><span class="line"><span class="attr">      password:</span> <span class="string">$&#123;password&#125;</span></span><br><span class="line"><span class="attr">  teardown_hooks:</span></span><br><span class="line"><span class="attr">  extract:</span></span><br><span class="line"><span class="attr">    token:</span> <span class="string">['jsonpath',</span> <span class="string">'$.data.token'</span><span class="string">]</span></span><br><span class="line"><span class="attr">  validate:</span></span><br><span class="line"><span class="attr">    code:</span> <span class="number">20022</span></span><br><span class="line"><span class="attr">    message:</span> <span class="string">成功111</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-2-字符串长度"><a href="#2-2-字符串长度" class="headerlink" title="2.2 字符串长度"></a>2.2 字符串长度</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = "hello"</span><br><span class="line">echo $&#123;#a&#125;</span><br></pre></td></tr></table></figure>
+<p>运行后结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data/mall/login.yaml::test_login1 --------------request------</span><br><span class="line">--------------response------</span><br><span class="line">&#123;<span class="string">'func_name'</span>: <span class="string">'login'</span>, <span class="string">'skip'</span>: <span class="string">'手动跳过'</span>, <span class="string">'epic'</span>: <span class="string">'mall商城'</span>, <span class="string">'feature'</span>: <span class="string">'登录'</span>, <span class="string">'story'</span>: <span class="string">'登录'</span>, <span class="string">'title'</span>: <span class="string">'正常账号密码登录'</span>, <span class="string">'requests'</span>: &#123;<span class="string">'url'</span>: <span class="string">'$&#123;host&#125;/admin/login'</span>, <span class="string">'method'</span>: <span class="string">'post'</span>, <span class="string">'headers'</span>: None, <span class="string">'params'</span>: None, <span class="string">'data'</span>: None, <span class="string">'json'</span>: &#123;<span class="string">'password'</span>: <span class="string">'$&#123;password&#125;'</span>, <span class="string">'username'</span>: <span class="string">'$&#123;username&#125;'</span>&#125;&#125;, <span class="string">'teardown_hooks'</span>: None, <span class="string">'extract'</span>: &#123;<span class="string">'token'</span>: [<span class="string">'jsonpath'</span>, <span class="string">'$.data.token'</span>]&#125;, <span class="string">'validate'</span>: &#123;<span class="string">'code'</span>: 20022, <span class="string">'message'</span>: <span class="string">'成功111'</span>&#125;&#125;</span><br><span class="line">PASSED</span><br><span class="line">data/mall/login.yaml::test_login2 --------------request------</span><br><span class="line">--------------response------</span><br><span class="line">&#123;<span class="string">'func_name'</span>: <span class="string">'login'</span>, <span class="string">'skip'</span>: <span class="string">'手动跳过2'</span>, <span class="string">'epic'</span>: <span class="string">'mall商城'</span>, <span class="string">'feature'</span>: <span class="string">'登录'</span>, <span class="string">'story'</span>: <span class="string">'登录'</span>, <span class="string">'title'</span>: <span class="string">'正常账号密码登录'</span>, <span class="string">'requests'</span>: &#123;<span class="string">'url'</span>: <span class="string">'$&#123;host&#125;/admin/login'</span>, <span class="string">'method'</span>: <span class="string">'post'</span>, <span class="string">'headers'</span>: None, <span class="string">'params'</span>: None, <span class="string">'data'</span>: None, <span class="string">'json'</span>: &#123;<span class="string">'password'</span>: <span class="string">'$&#123;password&#125;'</span>&#125;&#125;, <span class="string">'teardown_hooks'</span>: None, <span class="string">'extract'</span>: &#123;<span class="string">'token'</span>: [<span class="string">'jsonpath'</span>, <span class="string">'$.data.token'</span>]&#125;, <span class="string">'validate'</span>: &#123;<span class="string">'code'</span>: 20022, <span class="string">'message'</span>: <span class="string">'成功111'</span>&#125;&#125;</span><br><span class="line">PASSED</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-3-字符串提取"><a href="#2-3-字符串提取" class="headerlink" title="2.3 字符串提取"></a>2.3 字符串提取</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = "hello"</span><br><span class="line">echo $&#123;a:1:3&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-数组"><a href="#3-数组" class="headerlink" title="3 数组"></a>3 数组</h2><p>数组用括号表示，然后元素用空格分开</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = (A B "C" D)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-1-读取索引数组"><a href="#3-1-读取索引数组" class="headerlink" title="3.1 读取索引数组"></a>3.1 读取索引数组</h3><p>与切片类似</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = (A B "C" D)</span><br><span class="line">echo $&#123;a[0]&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-获取数组中所有元素"><a href="#3-2-获取数组中所有元素" class="headerlink" title="3.2 获取数组中所有元素"></a>3.2 获取数组中所有元素</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = (A B "C" D)</span><br><span class="line">echo $&#123;a[@]&#125;</span><br><span class="line">echo $&#123;a[*]&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-获取数组长度"><a href="#3-3-获取数组长度" class="headerlink" title="3.3 获取数组长度"></a>3.3 获取数组长度</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = (A B "C" D)</span><br><span class="line">echo $&#123;#a[@]&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-test命令"><a href="#4-test命令" class="headerlink" title="4 test命令"></a>4 test命令</h2><h3 id="4-1-数值测试"><a href="#4-1-数值测试" class="headerlink" title="4.1 数值测试"></a>4.1 数值测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-eq 等于则为真</span><br><span class="line">-ne 不等于则为真</span><br><span class="line">-gt 大于则为真</span><br><span class="line">-ge 大于等于则为真</span><br><span class="line">-lt 小于则为真</span><br><span class="line">-le 小于等于则为真</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-字符串测试"><a href="#4-2-字符串测试" class="headerlink" title="4.2 字符串测试"></a>4.2 字符串测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=   等于则为真</span><br><span class="line">!=  不相等则为真</span><br><span class="line">-z 字符串  字符串的长度为零则为真</span><br><span class="line">-n 字符串  字符串的长度不为零则为真</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-3-文件测试"><a href="#4-3-文件测试" class="headerlink" title="4.3 文件测试"></a>4.3 文件测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-e 文件名  如果文件存在则为真</span><br><span class="line">-r 文件名  如果文件存在且可读则为真</span><br><span class="line">-w 文件名  如果文件存在且可写则为真</span><br><span class="line">-x 文件名  如果文件存在且可执行则为真</span><br><span class="line">-s 文件名  如果文件存在且至少有一个字符则为真</span><br><span class="line">-d 文件名  如果文件存在且为目录则为真</span><br><span class="line">-f 文件名  如果文件存在且为普通文件则为真</span><br><span class="line">-c 文件名  如果文件存在且为字符型特殊文件则为真</span><br><span class="line">-b 文件名  如果文件存在且为块特殊文件则为真</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-控制流"><a href="#5-控制流" class="headerlink" title="5 控制流"></a>5 控制流</h2><h3 id="5-1-if判断流"><a href="#5-1-if判断流" class="headerlink" title="5.1 if判断流"></a>5.1 if判断流</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">then</span><br><span class="line">    command1 </span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN </span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-for循环"><a href="#5-2-for循环" class="headerlink" title="5.2 for循环"></a>5.2 for循环</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for var in item1 item2 ... itemN</span><br><span class="line">do</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-3-while循环"><a href="#5-3-while循环" class="headerlink" title="5.3 while循环"></a>5.3 while循环</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while condition</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-4-until循环"><a href="#5-4-until循环" class="headerlink" title="5.4 until循环"></a>5.4 until循环</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">until condition</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-5-case"><a href="#5-5-case" class="headerlink" title="5.5 case"></a>5.5 case</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">case 值 in</span><br><span class="line">模式1)</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN</span><br><span class="line">    ;;</span><br><span class="line">模式2）</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-6-跳出循环"><a href="#5-6-跳出循环" class="headerlink" title="5.6 跳出循环"></a>5.6 跳出循环</h3><p>break跳出循环</p>
-<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>复制目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r</span><br></pre></td></tr></table></figure>
-
-<p>级联创建目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p</span><br></pre></td></tr></table></figure>
-
-<p>剪切及重命名</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv</span><br></pre></td></tr></table></figure>
-
-<p>获取当前路径</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
-
-<p>获取目录下内容</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
-
-<p>删除目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf</span><br></pre></td></tr></table></figure>
-
-<p>查看实时日志</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f</span><br></pre></td></tr></table></figure>
-
-<p>查看进程信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep java</span><br></pre></td></tr></table></figure>
-
-<p>杀掉进程</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span></span><br></pre></td></tr></table></figure>
-
-<p>打包并压缩文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf</span><br></pre></td></tr></table></figure>
-
-<p>解压文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf</span><br></pre></td></tr></table></figure>
-
-<p>查看系统运行状态</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
-
-<p>查看系统网卡信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">ipaddr</span><br></pre></td></tr></table></figure>
-
-<p>查找端口</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | grep 80</span><br></pre></td></tr></table></figure>
-
-<p>启动jar包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar test.jar &amp;</span><br></pre></td></tr></table></figure>
-
-<p>查看磁盘信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
-
-<p>查看内存信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -h</span><br></pre></td></tr></table></figure>
-
-<p>查找文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find / -name *.conf</span><br><span class="line">find / -name <span class="string">"*.mp4"</span> -<span class="built_in">exec</span> rm -rf &#123;&#125;\;</span><br></pre></td></tr></table></figure>
-
-<p>过滤文本</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep root /etc/passwd</span><br></pre></td></tr></table></figure>
-
-<p>修改文本</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed</span><br></pre></td></tr></table></figure>
-
-<p>处理文本</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk</span><br></pre></td></tr></table></figure>
-
+<p>在yaml文件的config下定义了fixture，然后在conftest.py文件中写了对应的两个fixture，运行后控制台打印输入了fixture中的内容，说明调用fixture成功了。将打印测试数据换成对测试数据进行前置处理、发送请求、后置处理、断言等逻辑代码，即可执行接口自动化测试。</p>
 
       
     </div>
@@ -563,7 +485,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础知识/" rel="tag"><i class="fa fa-tag"></i> 基础知识</a>
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
           
         </div>
       
@@ -576,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2024/03/18/crypt-package/" rel="next" title="加解密封装">
-                <i class="fa fa-chevron-left"></i> 加解密封装
+              <a href="/2024/05/20/closure/" rel="next" title="python中的闭包">
+                <i class="fa fa-chevron-left"></i> python中的闭包
               </a>
             
           </div>
@@ -585,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2024/04/12/regex/" rel="prev" title="regex">
-                regex <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -640,17 +558,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -728,22 +637,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell"><span class="nav-number">1.</span> <span class="nav-text">Shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-变量"><span class="nav-number">1.1.</span> <span class="nav-text">1 变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字符串"><span class="nav-number">1.2.</span> <span class="nav-text">2 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-字符串拼接"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 字符串拼接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-字符串长度"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 字符串长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-字符串提取"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 字符串提取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数组"><span class="nav-number">1.3.</span> <span class="nav-text">3 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-读取索引数组"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 读取索引数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-获取数组中所有元素"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 获取数组中所有元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-获取数组长度"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 获取数组长度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-test命令"><span class="nav-number">1.4.</span> <span class="nav-text">4 test命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-数值测试"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 数值测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字符串测试"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 字符串测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-文件测试"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 文件测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-控制流"><span class="nav-number">1.5.</span> <span class="nav-text">5 控制流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-if判断流"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 if判断流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-for循环"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 for循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-while循环"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-until循环"><span class="nav-number">1.5.4.</span> <span class="nav-text">5.4 until循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-case"><span class="nav-number">1.5.5.</span> <span class="nav-text">5.5 case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-跳出循环"><span class="nav-number">1.5.6.</span> <span class="nav-text">5.6 跳出循环</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux"><span class="nav-number">2.</span> <span class="nav-text">Linux</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

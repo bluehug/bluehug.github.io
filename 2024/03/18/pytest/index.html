@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="木木十三">
 <meta property="og:description" content="pytest基础知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2024-05-16T09:41:13.951Z">
+<meta property="og:updated_time" content="2024-05-21T01:58:15.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pytest基础知识">
 <meta name="twitter:description" content="pytest基础知识">
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.4k 字
+                  2.5k 字
                 </span>
               
 
@@ -531,6 +531,12 @@
 <p>-x:只要有一个用例执行失败就停止当前线程的测试执行</p>
 <p>-maxfail=num:自定义失败次数</p>
 <p>-returns=num:失败用例重跑num次，需要安装<code>pytest-rerunfailures</code></p>
+<h2 id="11-其他"><a href="#11-其他" class="headerlink" title="11 其他"></a>11 其他</h2><p>在方法中添加标记，通过改变方法中的pytestmark属性来实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">functionName.pytestmark = pytest.mark.skip(reason=<span class="string">"跳过"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在pytest的item中，可以通过调用item的add_marker方法来增加标记</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item.add_marker(mark_name)</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -666,7 +672,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -737,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-用例设计"><span class="nav-number">1.</span> <span class="nav-text">1 用例设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-用例执行"><span class="nav-number">2.</span> <span class="nav-text">2 用例执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-主函数模式"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 主函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-命令行模式"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 命令行模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-通过标记执行"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 通过标记执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-参数化执行"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 参数化执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-用例跳过"><span class="nav-number">3.</span> <span class="nav-text">3 用例跳过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-无条件跳过"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 无条件跳过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-有条件跳过"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 有条件跳过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-跳过整个模块"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 跳过整个模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用例执行顺序"><span class="nav-number">4.</span> <span class="nav-text">4 用例执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-使用pytest-ordering插件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 使用pytest_ordering插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-规范测试用例命名"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 规范测试用例命名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试用例预期失败标记"><span class="nav-number">5.</span> <span class="nav-text">5 测试用例预期失败标记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-使用pytest-mark-xfail装饰器"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 使用pytest.mark.xfail装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-使用pytest-xfail函数"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 使用pytest.xfail函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-测试用例参数化"><span class="nav-number">6.</span> <span class="nav-text">6 测试用例参数化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-断言"><span class="nav-number">7.</span> <span class="nav-text">7 断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-捕获异常"><span class="nav-number">8.</span> <span class="nav-text">8 捕获异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-固件"><span class="nav-number">9.</span> <span class="nav-text">9 固件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-固件的基本知识"><span class="nav-number">9.1.</span> <span class="nav-text">9.1 固件的基本知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-固件的使用"><span class="nav-number">9.2.</span> <span class="nav-text">9.2 固件的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-运行参数"><span class="nav-number">10.</span> <span class="nav-text">10 运行参数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-用例设计"><span class="nav-number">1.</span> <span class="nav-text">1 用例设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-用例执行"><span class="nav-number">2.</span> <span class="nav-text">2 用例执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-主函数模式"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 主函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-命令行模式"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 命令行模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-通过标记执行"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 通过标记执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-参数化执行"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 参数化执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-用例跳过"><span class="nav-number">3.</span> <span class="nav-text">3 用例跳过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-无条件跳过"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 无条件跳过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-有条件跳过"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 有条件跳过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-跳过整个模块"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 跳过整个模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用例执行顺序"><span class="nav-number">4.</span> <span class="nav-text">4 用例执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-使用pytest-ordering插件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 使用pytest_ordering插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-规范测试用例命名"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 规范测试用例命名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试用例预期失败标记"><span class="nav-number">5.</span> <span class="nav-text">5 测试用例预期失败标记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-使用pytest-mark-xfail装饰器"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 使用pytest.mark.xfail装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-使用pytest-xfail函数"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 使用pytest.xfail函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-测试用例参数化"><span class="nav-number">6.</span> <span class="nav-text">6 测试用例参数化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-断言"><span class="nav-number">7.</span> <span class="nav-text">7 断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-捕获异常"><span class="nav-number">8.</span> <span class="nav-text">8 捕获异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-固件"><span class="nav-number">9.</span> <span class="nav-text">9 固件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-固件的基本知识"><span class="nav-number">9.1.</span> <span class="nav-text">9.1 固件的基本知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-固件的使用"><span class="nav-number">9.2.</span> <span class="nav-text">9.2 固件的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-运行参数"><span class="nav-number">10.</span> <span class="nav-text">10 运行参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-其他"><span class="nav-number">11.</span> <span class="nav-text">11 其他</span></a></li></ol></div>
             
 
           </div>
